@@ -1,0 +1,1571 @@
+Archive member included because of file (symbol)
+
+../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+                              Debug_MMCSD/bl_platform.o (GPIOModuleReset)
+../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                              Debug_MMCSD/bl_platform.o (I2CMasterInitExpClk)
+../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                              Debug_MMCSD/bl_hsmmcsd.o (HSMMCSDIntrStatusEnable)
+../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+                              Debug_MMCSD/bl_platform.o (boardName)
+../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+                              Debug_MMCSD/bl_platform.o (UARTStdioInit)
+../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+                              ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o) (ASCIIToDigit)
+../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+                              ../..//bootloader/binary/utils/Debug/libutils.a(board.o) (BoardInfoCheck)
+../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+                              ../..//bootloader/binary/utils/Debug/libutils.a(board.o) (BoardInfoRead)
+../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+                              Debug_MMCSD/bl_platform.o (GPIO0ModuleClkConfig)
+../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+                              Debug_MMCSD/bl_platform.o (I2CPinMuxSetup)
+../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+                              Debug_MMCSD/bl_platform.o (HSMMCSDPinMuxSetup)
+../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+                              ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o) (UARTConsoleInit)
+../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+                              ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o) (UARTPinMuxSetup)
+../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                              Debug_MMCSD/bl_hsmmcsd.o (HSMMCSDCardPresent)
+../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                              Debug_MMCSD/fat_mmcsd.o (MMCSDBusWidthSet)
+/home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcmp.o)
+                              Debug_MMCSD/ff.o (memcmp)
+/home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+                              Debug_MMCSD/bl_hsmmcsd.o (memcpy)
+/home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memset.o)
+                              Debug_MMCSD/ff.o (memset)
+/home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+                              Debug_MMCSD/bl_platform.o (strcmp)
+/home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+                              (__aeabi_uidiv)
+/home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+                              (__aeabi_idiv)
+/home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+                              /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                              ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o) (UARTOperatingModeSelect)
+
+Allocating common symbols
+Common symbol       size              file
+
+dataToSlave         0x3               Debug_MMCSD/bl_platform.o
+sdCard              0x48              Debug_MMCSD/bl_hsmmcsd.o
+rCount              0x4               Debug_MMCSD/bl_platform.o
+boardName           0x8               ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+numOfBytes          0x4               Debug_MMCSD/bl_platform.o
+ctrlInfo            0x50              Debug_MMCSD/bl_hsmmcsd.o
+boardData           0x4               ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+tCount              0x4               Debug_MMCSD/bl_platform.o
+oppMaxIdx           0x4               Debug_MMCSD/bl_platform.o
+deviceVersion       0x4               Debug_MMCSD/bl_platform.o
+dataFromSlave       0x2               Debug_MMCSD/bl_platform.o
+boardVersion        0x5               ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+freqMultDDR         0x4               Debug_MMCSD/bl_platform.o
+fat_devices         0x18              Debug_MMCSD/fat_mmcsd.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 Debug_MMCSD/bl_copy.o
+ .data          0x00000000        0x0 Debug_MMCSD/bl_copy.o
+ .bss           0x00000000        0x0 Debug_MMCSD/bl_copy.o
+ .text          0x00000000        0x0 Debug_MMCSD/bl_hsmmcsd.o
+ .data          0x00000000        0x0 Debug_MMCSD/bl_hsmmcsd.o
+ .bss           0x00000000        0x0 Debug_MMCSD/bl_hsmmcsd.o
+ .data.sdBlkSize
+                0x00000000        0x4 Debug_MMCSD/bl_hsmmcsd.o
+ .bss.g_sPState
+                0x00000000        0x4 Debug_MMCSD/bl_hsmmcsd.o
+ .bss.g_sCState
+                0x00000000        0x4 Debug_MMCSD/bl_hsmmcsd.o
+ .data.g_sFresultStrings
+                0x00000000       0x70 Debug_MMCSD/bl_hsmmcsd.o
+ .data          0x00000000        0x0 Debug_MMCSD/bl_init.o
+ .bss           0x00000000        0x0 Debug_MMCSD/bl_init.o
+ .text          0x00000000        0x0 Debug_MMCSD/bl_main.o
+ .data          0x00000000        0x0 Debug_MMCSD/bl_main.o
+ .bss           0x00000000        0x0 Debug_MMCSD/bl_main.o
+ .bss.DspEntryPoint
+                0x00000000        0x4 Debug_MMCSD/bl_main.o
+ .text.BootAbort
+                0x00000000        0xc Debug_MMCSD/bl_main.o
+ .text          0x00000000        0x0 Debug_MMCSD/bl_platform.o
+ .data          0x00000000        0x0 Debug_MMCSD/bl_platform.o
+ .bss           0x00000000        0x0 Debug_MMCSD/bl_platform.o
+ .data.flag     0x00000000        0x4 Debug_MMCSD/bl_platform.o
+ .text          0x00000000        0x0 Debug_MMCSD/cache.o
+ .data          0x00000000        0x0 Debug_MMCSD/cache.o
+ .bss           0x00000000        0x0 Debug_MMCSD/cache.o
+ .text.CacheDisable
+                0x00000000       0x7c Debug_MMCSD/cache.o
+ .text.CacheEnable
+                0x00000000       0x94 Debug_MMCSD/cache.o
+ .text.CacheInstInvalidateAll
+                0x00000000       0x18 Debug_MMCSD/cache.o
+ .text.CacheInstInvalidateBuff
+                0x00000000       0x30 Debug_MMCSD/cache.o
+ .text.CacheDataCleanInvalidateAll
+                0x00000000       0x18 Debug_MMCSD/cache.o
+ .text.CacheDataCleanAll
+                0x00000000       0x18 Debug_MMCSD/cache.o
+ .text.CacheDataInvalidateAll
+                0x00000000       0x18 Debug_MMCSD/cache.o
+ .text.CacheDataCleanInvalidateBuff
+                0x00000000       0x30 Debug_MMCSD/cache.o
+ .data          0x00000000        0x0 Debug_MMCSD/cp15.o
+ .bss           0x00000000        0x0 Debug_MMCSD/cp15.o
+ .text          0x00000000        0x0 Debug_MMCSD/device.o
+ .data          0x00000000        0x0 Debug_MMCSD/device.o
+ .bss           0x00000000        0x0 Debug_MMCSD/device.o
+ .text          0x00000000        0x0 Debug_MMCSD/fat_mmcsd.o
+ .data          0x00000000        0x0 Debug_MMCSD/fat_mmcsd.o
+ .bss           0x00000000        0x0 Debug_MMCSD/fat_mmcsd.o
+ .text          0x00000000        0x0 Debug_MMCSD/ff.o
+ .data          0x00000000        0x0 Debug_MMCSD/ff.o
+ .bss           0x00000000        0x0 Debug_MMCSD/ff.o
+ .text.get_fileinfo
+                0x00000000      0x280 Debug_MMCSD/ff.o
+ .text.f_write  0x00000000      0x4fc Debug_MMCSD/ff.o
+ .text.f_lseek  0x00000000      0x3c8 Debug_MMCSD/ff.o
+ .text.f_opendir
+                0x00000000      0x17c Debug_MMCSD/ff.o
+ .text.f_readdir
+                0x00000000      0x170 Debug_MMCSD/ff.o
+ .text.f_stat   0x00000000       0xc8 Debug_MMCSD/ff.o
+ .text.f_getfree
+                0x00000000      0x2a0 Debug_MMCSD/ff.o
+ .text.f_unlink
+                0x00000000      0x2c0 Debug_MMCSD/ff.o
+ .text.f_mkdir  0x00000000      0x4d8 Debug_MMCSD/ff.o
+ .text.f_chmod  0x00000000      0x120 Debug_MMCSD/ff.o
+ .text.f_rename
+                0x00000000      0x23c Debug_MMCSD/ff.o
+ .text          0x00000000        0x0 Debug_MMCSD/mmu.o
+ .data          0x00000000        0x0 Debug_MMCSD/mmu.o
+ .bss           0x00000000        0x0 Debug_MMCSD/mmu.o
+ .text.MMUInit  0x00000000       0x88 Debug_MMCSD/mmu.o
+ .text.MMUMemRegionMap
+                0x00000000      0x110 Debug_MMCSD/mmu.o
+ .text.MMUEnable
+                0x00000000       0x38 Debug_MMCSD/mmu.o
+ .debug_info    0x00000000      0x16d Debug_MMCSD/mmu.o
+ .debug_abbrev  0x00000000       0xd9 Debug_MMCSD/mmu.o
+ .debug_loc     0x00000000       0x84 Debug_MMCSD/mmu.o
+ .debug_aranges
+                0x00000000       0x30 Debug_MMCSD/mmu.o
+ .debug_ranges  0x00000000       0x20 Debug_MMCSD/mmu.o
+ .debug_line    0x00000000       0xc5 Debug_MMCSD/mmu.o
+ .debug_str     0x00000000      0x130 Debug_MMCSD/mmu.o
+ .comment       0x00000000       0x71 Debug_MMCSD/mmu.o
+ .ARM.attributes
+                0x00000000       0x37 Debug_MMCSD/mmu.o
+ .debug_frame   0x00000000       0x60 Debug_MMCSD/mmu.o
+ .text          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOModuleDisable
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIODirModeGet
+                0x00000000       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOPinRead
+                0x00000000       0x40 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOMultiplePinsWrite
+                0x00000000       0x44 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOMultiplePinsRead
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOPinIntEnable
+                0x00000000       0x64 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOPinIntDisable
+                0x00000000       0x64 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOIntTypeSet
+                0x00000000      0x564 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOIntTypeGet
+                0x00000000      0x120 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOPinIntStatus
+                0x00000000       0x84 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOPinIntClear
+                0x00000000       0x64 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIORawIntStatus
+                0x00000000       0x74 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOTriggerPinInt
+                0x00000000       0x64 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOWakeupGlobalEnable
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOWakeupGlobalDisable
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOPinIntWakeUpEnable
+                0x00000000       0x84 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOPinIntWakeUpDisable
+                0x00000000       0x8c ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOAutoIdleModeControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOIdleModeConfigure
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIOGatingRatioConfigure
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIODebounceFuncControl
+                0x00000000       0x78 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIODebounceTimeConfig
+                0x00000000       0x34 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.GPIORevisionInfoGet
+                0x00000000       0x28 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.gpioContextSave
+                0x00000000       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text.gpioContextRestore
+                0x00000000       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterBusy
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterErr
+                0x00000000       0x3c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntEnableEx
+                0x00000000       0x40 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntStatus
+                0x00000000       0x2c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntStatusEx
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterIntRawStatusClearEx
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CMasterSlaveAddrGet
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDataCountGet
+                0x00000000       0x2c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CFIFOThresholdConfig
+                0x00000000       0xb0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CFIFOClear
+                0x00000000       0x68 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMATxEventEnable
+                0x00000000       0x48 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMARxEventEnable
+                0x00000000       0x48 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMATxEventDisable
+                0x00000000       0x48 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CDMARxEventDisable
+                0x00000000       0x48 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CBufferStatus
+                0x00000000       0xa4 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CActiveOwnAddressGet
+                0x00000000       0xc4 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CClockBlockingControl
+                0x00000000      0x124 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2COwnAddressSet
+                0x00000000       0x84 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CAutoIdleEnable
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CGlobalWakeUpEnable
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CGlobalWakeUpDisable
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CIdleModeSelect
+                0x00000000       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CClockActivitySelect
+                0x00000000       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CWakeUpEnable
+                0x00000000       0xb0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CWakeUpDisable
+                0x00000000       0xbc ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CContextSave
+                0x00000000       0x70 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text.I2CContextRestore
+                0x00000000      0x10c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .text.HSMMCSDIsHSupported
+                0x00000000       0x34 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .text.HSMMCSDIsXferComplete
+                0x00000000       0x88 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .text.HSMMCSDDataGet
+                0x00000000       0x70 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .text.HSMMCSDIsCardWriteProtected
+                0x00000000       0x34 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .text.MMCSDContextSave
+                0x00000000       0x98 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .text.MMCSDContextRestore
+                0x00000000       0x98 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .text.BoardVersionGet
+                0x00000000       0x20 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .text.BoardNameGet
+                0x00000000       0x20 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .text.BoardIdGet
+                0x00000000       0x24 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .rodata        0x00000000       0x60 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .rodata.g_pcHex
+                0x00000000        0x4 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTStdioRead
+                0x00000000       0xd0 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGets
+                0x00000000       0xdc ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPutNum
+                0x00000000      0x178 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPutHexNum
+                0x00000000      0x198 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetNum
+                0x00000000      0x118 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetHexNum
+                0x00000000      0x2ec ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTGetc
+                0x00000000       0x20 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTwrite
+                0x00000000       0x94 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTprintf
+                0x00000000      0x6b8 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTScanf
+                0x00000000      0xa68 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text.UARTPrintf
+                0x00000000      0x6ac ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .text.ASCIIToDigit
+                0x00000000       0xe8 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .text.DigitToASCII
+                0x00000000       0xb8 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .text.StrToEthrAddr
+                0x00000000      0x184 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .text.EthrAddrToStr
+                0x00000000      0x180 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .text.TimeToStr
+                0x00000000      0x18c ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .text.DateToStr
+                0x00000000      0x18c ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_info    0x00000000      0x289 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_abbrev  0x00000000       0xce ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_loc     0x00000000      0x108 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_aranges
+                0x00000000       0x48 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_ranges  0x00000000       0x38 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_line    0x00000000      0x1ab ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_str     0x00000000      0x187 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .ARM.attributes
+                0x00000000       0x37 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .debug_frame   0x00000000       0xb0 ../..//bootloader/binary/utils/Debug/libutils.a(ascii.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .text.GPIO1Pin23PinMuxSetup
+                0x00000000       0x24 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .text.GPIO1ModuleClkConfig
+                0x00000000       0xbc ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .text.GPIO1PinMuxSetup
+                0x00000000       0x38 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .text.I2C1ModuleClkConfig
+                0x00000000      0x24c ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UARTConsoleGetc
+                0x00000000       0x2c ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .text          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcmp.o)
+ .data          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcmp.o)
+ .bss           0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcmp.o)
+ .text          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memset.o)
+ .text          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+ .data          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+ .bss           0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+ .data          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .data          0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .bss           0x00000000        0x0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDivisorLatchEnable
+                0x00000000       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRegConfModeRestore
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTParityModeSet
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTParityModeGet
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMAEnable
+                0x00000000       0x80 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMADisable
+                0x00000000       0x54 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSubConfigMSRSPRModeEn
+                0x00000000      0x124 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSubConfigXOFFModeEn
+                0x00000000      0x124 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntEnable
+                0x00000000      0x130 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntDisable
+                0x00000000      0x110 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSpaceAvail
+                0x00000000       0x78 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharsAvail
+                0x00000000       0x78 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharPutNonBlocking
+                0x00000000       0x8c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGetNonBlocking
+                0x00000000       0x80 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGet
+                0x00000000       0x84 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTCharGetTimeout
+                0x00000000       0xac ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOCharPut
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOCharGet
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOWrite
+                0x00000000       0x78 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRxErrorGet
+                0x00000000       0x6c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntIdentityGet
+                0x00000000       0x6c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIntPendingStatusGet
+                0x00000000       0x78 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOEnableStatusGet
+                0x00000000       0x78 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutoRTSAutoCTSControl
+                0x00000000       0xb4 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSpecialCharDetectControl
+                0x00000000       0x8c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTSoftwareFlowCtrlOptSet
+                0x00000000       0x8c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTPulseShapingControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTIdleModeConfigure
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutoIdleModeControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFlowCtrlTrigLvlConfig
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXON1XOFF1ValProgram
+                0x00000000       0x4c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXON2XOFF2ValProgram
+                0x00000000       0x4c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTXONAnyFeatureControl
+                0x00000000      0x100 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTLoopbackModeControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemControlSet
+                0x00000000       0x44 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemControlClear
+                0x00000000       0x48 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemStatusGet
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModemStatusChangeCheck
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTResumeOperation
+                0x00000000       0x28 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpEventsEnable
+                0x00000000       0x44 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTWakeUpEventsDisable
+                0x00000000       0x48 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTFIFOTrigLvlGranControl
+                0x00000000       0x88 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDSRInterruptControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxEmptyIntControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRXCTSDSRWakeUpConfigure
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRXCTSDSRTransitionStatusGet
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTDMACounterResetControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxFIFOFullStatusGet
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxFIFOLevelGet
+                0x00000000       0x2c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTRxFIFOLevelGet
+                0x00000000       0x2c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudParityGet
+                0x00000000       0x6c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudWordLenGet
+                0x00000000       0x6c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTAutobaudSpeedGet
+                0x00000000       0x6c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTScratchPadRegWrite
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTScratchPadRegRead
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTModuleVersionNumberGet
+                0x00000000       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxDMAThresholdControl
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .text.UARTTxDMAThresholdValConfig
+                0x00000000       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+IRAM_MEM         0x402f0400         0x0001fbff
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD Debug_MMCSD/bl_copy.o
+LOAD Debug_MMCSD/bl_hsmmcsd.o
+LOAD Debug_MMCSD/bl_init.o
+LOAD Debug_MMCSD/bl_main.o
+LOAD Debug_MMCSD/bl_platform.o
+LOAD Debug_MMCSD/cache.o
+LOAD Debug_MMCSD/cp15.o
+LOAD Debug_MMCSD/device.o
+LOAD Debug_MMCSD/fat_mmcsd.o
+LOAD Debug_MMCSD/ff.o
+LOAD Debug_MMCSD/mmu.o
+                0x402f0400                BOOT_START_ADDR = 0x402f0400
+
+.rsthand        0x402f0400       0x80
+                0x402f0400                . = ALIGN (0x4)
+ *bl_init.o(.text)
+ .text          0x402f0400       0x80 Debug_MMCSD/bl_init.o
+                0x402f0400                Entry
+
+.text           0x402f0480     0xb0d8
+                0x402f0480                . = ALIGN (0x4)
+ *(.text*)
+ .text.ImageCopy
+                0x402f0480       0x18 Debug_MMCSD/bl_copy.o
+                0x402f0480                ImageCopy
+ .text.MMCSDBootCopy
+                0x402f0498       0x38 Debug_MMCSD/bl_copy.o
+ .text.HSMMCSDCmdStatusGet
+                0x402f04d0       0xfc Debug_MMCSD/bl_hsmmcsd.o
+ .text.HSMMCSDXferStatusGet
+                0x402f05cc      0x324 Debug_MMCSD/bl_hsmmcsd.o
+ .text.HSMMCSDXferSetup
+                0x402f08f0      0x150 Debug_MMCSD/bl_hsmmcsd.o
+ .text.HSMMCSDStatusGet
+                0x402f0a40       0xb4 Debug_MMCSD/bl_hsmmcsd.o
+ .text.HSMMCSDControllerSetup
+                0x402f0af4      0x190 Debug_MMCSD/bl_hsmmcsd.o
+ .text.HSMMCSDFsMount
+                0x402f0c84       0x60 Debug_MMCSD/bl_hsmmcsd.o
+                0x402f0c84                HSMMCSDFsMount
+ .text.HSMMCSDImageCopy
+                0x402f0ce4      0x1fc Debug_MMCSD/bl_hsmmcsd.o
+                0x402f0ce4                HSMMCSDImageCopy
+ .text.HSMMCSDInit
+                0x402f0ee0       0x98 Debug_MMCSD/bl_hsmmcsd.o
+                0x402f0ee0                HSMMCSDInit
+ .text.main     0x402f0f78       0xfc Debug_MMCSD/bl_main.o
+                0x402f0f78                main
+ .text.BootMaxOppGet
+                0x402f1074      0x12c Debug_MMCSD/bl_platform.o
+                0x402f1074                BootMaxOppGet
+ .text.CorePLLInit
+                0x402f11a0      0x174 Debug_MMCSD/bl_platform.o
+                0x402f11a0                CorePLLInit
+ .text.DisplayPLLInit
+                0x402f1314      0x134 Debug_MMCSD/bl_platform.o
+                0x402f1314                DisplayPLLInit
+ .text.PerPLLInit
+                0x402f1448      0x130 Debug_MMCSD/bl_platform.o
+                0x402f1448                PerPLLInit
+ .text.DDRPLLInit
+                0x402f1578      0x140 Debug_MMCSD/bl_platform.o
+                0x402f1578                DDRPLLInit
+ .text.MPUPLLInit
+                0x402f16b8      0x140 Debug_MMCSD/bl_platform.o
+                0x402f16b8                MPUPLLInit
+ .text.InterfaceClkInit
+                0x402f17f8      0x164 Debug_MMCSD/bl_platform.o
+                0x402f17f8                InterfaceClkInit
+ .text.PowerDomainTransitionInit
+                0x402f195c       0xa0 Debug_MMCSD/bl_platform.o
+                0x402f195c                PowerDomainTransitionInit
+ .text.PLLInit  0x402f19fc       0x8c Debug_MMCSD/bl_platform.o
+                0x402f19fc                PLLInit
+ .text.SetupI2C
+                0x402f1a88       0xc8 Debug_MMCSD/bl_platform.o
+                0x402f1a88                SetupI2C
+ .text.CleanupInterrupts
+                0x402f1b50       0x24 Debug_MMCSD/bl_platform.o
+                0x402f1b50                CleanupInterrupts
+ .text.SetupI2CTransmit
+                0x402f1b74      0x188 Debug_MMCSD/bl_platform.o
+                0x402f1b74                SetupI2CTransmit
+ .text.SetupReception
+                0x402f1cfc      0x278 Debug_MMCSD/bl_platform.o
+                0x402f1cfc                SetupReception
+ .text.TPS65217RegRead
+                0x402f1f74       0x68 Debug_MMCSD/bl_platform.o
+                0x402f1f74                TPS65217RegRead
+ .text.TPS65217RegWrite
+                0x402f1fdc      0x1f4 Debug_MMCSD/bl_platform.o
+                0x402f1fdc                TPS65217RegWrite
+ .text.TPS65217VoltageUpdate
+                0x402f21d0       0x64 Debug_MMCSD/bl_platform.o
+                0x402f21d0                TPS65217VoltageUpdate
+ .text.SetVdd1OpVoltage
+                0x402f2234       0x34 Debug_MMCSD/bl_platform.o
+                0x402f2234                SetVdd1OpVoltage
+ .text.ConfigVddOpVoltage
+                0x402f2268      0x11c Debug_MMCSD/bl_platform.o
+                0x402f2268                ConfigVddOpVoltage
+ .text.DDR2PhyInit
+                0x402f2384      0x1f4 Debug_MMCSD/bl_platform.o
+ .text.DDR3PhyInit
+                0x402f2578      0x164 Debug_MMCSD/bl_platform.o
+ .text.DDR3Init
+                0x402f26dc      0x22c Debug_MMCSD/bl_platform.o
+                0x402f26dc                DDR3Init
+ .text.DDR2Init
+                0x402f2908      0x27c Debug_MMCSD/bl_platform.o
+                0x402f2908                DDR2Init
+ .text.EMIFInit
+                0x402f2b84       0x94 Debug_MMCSD/bl_platform.o
+                0x402f2b84                EMIFInit
+ .text.BlPlatformMMCSDSetup
+                0x402f2c18       0x24 Debug_MMCSD/bl_platform.o
+                0x402f2c18                BlPlatformMMCSDSetup
+ .text.UARTSetup
+                0x402f2c3c       0x50 Debug_MMCSD/bl_platform.o
+                0x402f2c3c                UARTSetup
+ .text.BlPlatformConfig
+                0x402f2c8c      0x1c4 Debug_MMCSD/bl_platform.o
+                0x402f2c8c                BlPlatformConfig
+ .text.DDRVTTEnable
+                0x402f2e50       0x8c Debug_MMCSD/bl_platform.o
+ .text.BlPlatformConfigPostBoot
+                0x402f2edc       0x14 Debug_MMCSD/bl_platform.o
+                0x402f2edc                BlPlatformConfigPostBoot
+ .text.BlPlatformMMCSDImageCopy
+                0x402f2ef0       0x2c Debug_MMCSD/bl_platform.o
+                0x402f2ef0                BlPlatformMMCSDImageCopy
+ .text.CacheDataCleanBuff
+                0x402f2f1c       0x30 Debug_MMCSD/cache.o
+                0x402f2f1c                CacheDataCleanBuff
+ .text.CacheDataInvalidateBuff
+                0x402f2f4c       0x30 Debug_MMCSD/cache.o
+                0x402f2f4c                CacheDataInvalidateBuff
+ .text          0x402f2f7c      0x488 Debug_MMCSD/cp15.o
+                0x402f2f7c                CP15ICacheDisable
+                0x402f2f98                CP15DCacheDisable
+                0x402f2fb4                CP15ICacheEnable
+                0x402f2fc4                CP15DCacheEnable
+                0x402f2fd4                CP15DCacheFlush
+                0x402f3068                CP15DCacheClean
+                0x402f30fc                CP15DCacheCleanFlush
+                0x402f3190                CP15ICacheFlush
+                0x402f31a0                CP15DCacheCleanBuff
+                0x402f31f4                CP15DCacheCleanFlushBuff
+                0x402f3248                CP15DCacheFlushBuff
+                0x402f32ac                CP15ICacheFlushBuff
+                0x402f3300                CP15Ttb0Set
+                0x402f330c                CP15TlbInvalidate
+                0x402f3318                CP15MMUDisable
+                0x402f3330                CP15MMUEnable
+                0x402f3344                CP15VectorBaseAddrSet
+                0x402f3350                CP15BranchPredictorInvalidate
+                0x402f335c                CP15BranchPredictionEnable
+                0x402f336c                CP15BranchPredictionDisable
+                0x402f337c                CP15DomainAccessClientSet
+                0x402f338c                CP15ControlFeatureDisable
+                0x402f33a0                CP15ControlFeatureEnable
+                0x402f33b4                CP15TtbCtlTtb0Config
+                0x402f33c4                CP15AuxControlFeatureEnable
+                0x402f33d8                CP15AuxControlFeatureDisable
+                0x402f33ec                CP15MainIdPrimPartNumGet
+ .text.DeviceVersionGet
+                0x402f3404       0x34 Debug_MMCSD/device.o
+                0x402f3404                DeviceVersionGet
+ .text.SysConfigOppDataGet
+                0x402f3438       0x2c Debug_MMCSD/device.o
+                0x402f3438                SysConfigOppDataGet
+ .text.disk_initialize
+                0x402f3464      0x158 Debug_MMCSD/fat_mmcsd.o
+                0x402f3464                disk_initialize
+ .text.disk_status
+                0x402f35bc       0x28 Debug_MMCSD/fat_mmcsd.o
+                0x402f35bc                disk_status
+ .text.disk_read
+                0x402f35e4       0x9c Debug_MMCSD/fat_mmcsd.o
+                0x402f35e4                disk_read
+ .text.disk_write
+                0x402f3680       0x9c Debug_MMCSD/fat_mmcsd.o
+                0x402f3680                disk_write
+ .text.disk_ioctl
+                0x402f371c       0x34 Debug_MMCSD/fat_mmcsd.o
+                0x402f371c                disk_ioctl
+ .text.get_fattime
+                0x402f3750       0x20 Debug_MMCSD/fat_mmcsd.o
+                0x402f3750                get_fattime
+ .text.move_window
+                0x402f3770      0x17c Debug_MMCSD/ff.o
+ .text.sync     0x402f38ec       0x88 Debug_MMCSD/ff.o
+ .text.get_cluster
+                0x402f3974      0x354 Debug_MMCSD/ff.o
+ .text.put_cluster
+                0x402f3cc8      0x3dc Debug_MMCSD/ff.o
+ .text.remove_chain
+                0x402f40a4       0xcc Debug_MMCSD/ff.o
+ .text.create_chain
+                0x402f4170      0x1f0 Debug_MMCSD/ff.o
+ .text.clust2sect
+                0x402f4360       0x6c Debug_MMCSD/ff.o
+ .text.next_dir_entry
+                0x402f43cc      0x134 Debug_MMCSD/ff.o
+ .text.make_dirfile
+                0x402f4500      0x30c Debug_MMCSD/ff.o
+ .text.trace_path
+                0x402f480c      0x318 Debug_MMCSD/ff.o
+ .text.reserve_direntry
+                0x402f4b24      0x280 Debug_MMCSD/ff.o
+ .text.check_fs
+                0x402f4da4      0x128 Debug_MMCSD/ff.o
+ .text.auto_mount
+                0x402f4ecc      0x618 Debug_MMCSD/ff.o
+ .text.validate
+                0x402f54e4       0x80 Debug_MMCSD/ff.o
+ .text.f_mount  0x402f5564       0xac Debug_MMCSD/ff.o
+                0x402f5564                f_mount
+ .text.f_open   0x402f5610      0x5b8 Debug_MMCSD/ff.o
+                0x402f5610                f_open
+ .text.f_read   0x402f5bc8      0x454 Debug_MMCSD/ff.o
+                0x402f5bc8                f_read
+ .text.f_sync   0x402f601c      0x2d8 Debug_MMCSD/ff.o
+                0x402f601c                f_sync
+ .text.f_close  0x402f62f4       0x50 Debug_MMCSD/ff.o
+                0x402f62f4                f_close
+ .text.GPIOModuleReset
+                0x402f6344       0x54 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+                0x402f6344                GPIOModuleReset
+ .text.GPIOModuleEnable
+                0x402f6398       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+                0x402f6398                GPIOModuleEnable
+ .text.GPIODirModeSet
+                0x402f63d0       0x88 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+                0x402f63d0                GPIODirModeSet
+ .text.GPIOPinWrite
+                0x402f6458       0x64 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+                0x402f6458                GPIOPinWrite
+ .text.I2CMasterInitExpClk
+                0x402f64bc       0xa4 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f64bc                I2CMasterInitExpClk
+ .text.I2CMasterEnable
+                0x402f6560       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6560                I2CMasterEnable
+ .text.I2CMasterDisable
+                0x402f6598       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6598                I2CMasterDisable
+ .text.I2CMasterBusBusy
+                0x402f65d0       0x50 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f65d0                I2CMasterBusBusy
+ .text.I2CMasterControl
+                0x402f6620       0x34 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6620                I2CMasterControl
+ .text.I2CMasterStart
+                0x402f6654       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6654                I2CMasterStart
+ .text.I2CMasterStop
+                0x402f668c       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f668c                I2CMasterStop
+ .text.I2CMasterIntDisableEx
+                0x402f66c4       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f66c4                I2CMasterIntDisableEx
+ .text.I2CMasterIntRawStatus
+                0x402f66f4       0x2c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f66f4                I2CMasterIntRawStatus
+ .text.I2CMasterIntRawStatusEx
+                0x402f6720       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6720                I2CMasterIntRawStatusEx
+ .text.I2CMasterIntClearEx
+                0x402f6758       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6758                I2CMasterIntClearEx
+ .text.I2CMasterSlaveAddrSet
+                0x402f6788       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6788                I2CMasterSlaveAddrSet
+ .text.I2CSetDataCount
+                0x402f67b8       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f67b8                I2CSetDataCount
+ .text.I2CSoftReset
+                0x402f67e8       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f67e8                I2CSoftReset
+ .text.I2CAutoIdleDisable
+                0x402f6820       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6820                I2CAutoIdleDisable
+ .text.I2CSystemStatusGet
+                0x402f6858       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6858                I2CSystemStatusGet
+ .text.I2CMasterDataPut
+                0x402f6888       0x34 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f6888                I2CMasterDataPut
+ .text.I2CMasterDataGet
+                0x402f68bc       0x34 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                0x402f68bc                I2CMasterDataGet
+ .text.HSMMCSDSoftReset
+                0x402f68f0       0xa0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f68f0                HSMMCSDSoftReset
+ .text.HSMMCSDLinesReset
+                0x402f6990       0xb0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6990                HSMMCSDLinesReset
+ .text.HSMMCSDSystemConfig
+                0x402f6a40       0x64 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6a40                HSMMCSDSystemConfig
+ .text.HSMMCSDBusWidthSet
+                0x402f6aa4       0xf0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6aa4                HSMMCSDBusWidthSet
+ .text.HSMMCSDBusVoltSet
+                0x402f6b94       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6b94                HSMMCSDBusVoltSet
+ .text.HSMMCSDBusPower
+                0x402f6bf0       0xbc ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6bf0                HSMMCSDBusPower
+ .text.HSMMCSDIntClock
+                0x402f6cac       0x7c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6cac                HSMMCSDIntClock
+ .text.HSMMCSDIsIntClockStable
+                0x402f6d28       0x88 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6d28                HSMMCSDIsIntClockStable
+ .text.HSMMCSDSupportedVoltSet
+                0x402f6db0       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6db0                HSMMCSDSupportedVoltSet
+ .text.HSMMCSDDataTimeoutSet
+                0x402f6e0c       0x5c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6e0c                HSMMCSDDataTimeoutSet
+ .text.HSMMCSDBusFreqSet
+                0x402f6e68      0x194 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6e68                HSMMCSDBusFreqSet
+ .text.HSMMCSDInitStreamSend
+                0x402f6ffc       0xa8 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f6ffc                HSMMCSDInitStreamSend
+ .text.HSMMCSDIntrStatusEnable
+                0x402f70a4       0x40 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f70a4                HSMMCSDIntrStatusEnable
+ .text.HSMMCSDIntrStatusDisable
+                0x402f70e4       0x44 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f70e4                HSMMCSDIntrStatusDisable
+ .text.HSMMCSDIntrEnable
+                0x402f7128       0x50 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f7128                HSMMCSDIntrEnable
+ .text.HSMMCSDIntrStatusGet
+                0x402f7178       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f7178                HSMMCSDIntrStatusGet
+ .text.HSMMCSDIntrStatusClear
+                0x402f71b0       0x30 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f71b0                HSMMCSDIntrStatusClear
+ .text.HSMMCSDIsCmdComplete
+                0x402f71e0       0x84 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f71e0                HSMMCSDIsCmdComplete
+ .text.HSMMCSDBlkLenSet
+                0x402f7264       0x64 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f7264                HSMMCSDBlkLenSet
+ .text.HSMMCSDCommandSend
+                0x402f72c8       0xc4 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f72c8                HSMMCSDCommandSend
+ .text.HSMMCSDResponseGet
+                0x402f738c       0x70 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f738c                HSMMCSDResponseGet
+ .text.HSMMCSDIsCardInserted
+                0x402f73fc       0x34 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                0x402f73fc                HSMMCSDIsCardInserted
+ .text.BoardInfoInit
+                0x402f7430      0x154 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+                0x402f7430                BoardInfoInit
+ .text.UARTStdioInit
+                0x402f7584       0x18 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+                0x402f7584                UARTStdioInit
+ .text.UARTPuts
+                0x402f759c       0xec ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+                0x402f759c                UARTPuts
+ .text.UARTPutc
+                0x402f7688       0x30 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+                0x402f7688                UARTPutc
+ .text.BoardInfoCheck
+                0x402f76b8      0x12c ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+                0x402f76b8                BoardInfoCheck
+ .text.EEPROMI2CSetUp
+                0x402f77e4       0xec ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+                0x402f77e4                EEPROMI2CSetUp
+ .text.EEPROMI2CRead
+                0x402f78d0      0x294 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+                0x402f78d0                EEPROMI2CRead
+ .text.StatusClear
+                0x402f7b64       0x24 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .text.I2C0PinMux
+                0x402f7b88       0x34 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .text.BoardInfoRead
+                0x402f7bbc       0x40 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+                0x402f7bbc                BoardInfoRead
+ .text.GPIO0ModuleClkConfig
+                0x402f7bfc      0x148 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+                0x402f7bfc                GPIO0ModuleClkConfig
+ .text.GpioPinMuxSetup
+                0x402f7d44       0x34 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+                0x402f7d44                GpioPinMuxSetup
+ .text.I2CPinMuxSetup
+                0x402f7d78       0x78 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+                0x402f7d78                I2CPinMuxSetup
+ .text.I2C0ModuleClkConfig
+                0x402f7df0      0x35c ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+                0x402f7df0                I2C0ModuleClkConfig
+ .text.HSMMCSDPinMuxSetup
+                0x402f814c       0x84 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+                0x402f814c                HSMMCSDPinMuxSetup
+ .text.HSMMCSDModuleClkConfig
+                0x402f81d0       0x4c ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+                0x402f81d0                HSMMCSDModuleClkConfig
+ .text.UARTStdioInitExpClk
+                0x402f821c       0xd0 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UartFIFOConfigure
+                0x402f82ec       0x64 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UartBaudRateSet
+                0x402f8350       0x5c ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .text.UARTConsoleInit
+                0x402f83ac       0x44 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+                0x402f83ac                UARTConsoleInit
+ .text.UARTConsolePutc
+                0x402f83f0       0x38 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+                0x402f83f0                UARTConsolePutc
+ .text.UARTPinMuxSetup
+                0x402f8428       0x48 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+                0x402f8428                UARTPinMuxSetup
+ .text.UART0ModuleClkConfig
+                0x402f8470      0x35c ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+                0x402f8470                UART0ModuleClkConfig
+ .text.HSMMCSDCardPresent
+                0x402f87cc       0x38 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                0x402f87cc                HSMMCSDCardPresent
+ .text.HSMMCSDIntEnable
+                0x402f8804       0x3c ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                0x402f8804                HSMMCSDIntEnable
+ .text.HSMMCSDControllerInit
+                0x402f8840      0x1c4 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                0x402f8840                HSMMCSDControllerInit
+ .text.HSMMCSDCmdSend
+                0x402f8a04      0x258 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                0x402f8a04                HSMMCSDCmdSend
+ .text.HSMMCSDBusWidthConfig
+                0x402f8c5c       0x64 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                0x402f8c5c                HSMMCSDBusWidthConfig
+ .text.HSMMCSDBusFreqConfig
+                0x402f8cc0       0x50 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                0x402f8cc0                HSMMCSDBusFreqConfig
+ .text.MMCSDCmdSend
+                0x402f8d10       0x38 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f8d10                MMCSDCmdSend
+ .text.MMCSDAppCmdSend
+                0x402f8d48       0x98 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f8d48                MMCSDAppCmdSend
+ .text.MMCSDBusWidthSet
+                0x402f8de0       0xe8 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f8de0                MMCSDBusWidthSet
+ .text.MMCSDTranSpeedSet
+                0x402f8ec8      0x1ac ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f8ec8                MMCSDTranSpeedSet
+ .text.MMCSDCardReset
+                0x402f9074       0x5c ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f9074                MMCSDCardReset
+ .text.MMCSDStopCmdSend
+                0x402f90d0       0x6c ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f90d0                MMCSDStopCmdSend
+ .text.MMCSDCardTypeCheck
+                0x402f913c       0x54 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f913c                MMCSDCardTypeCheck
+ .text.MMCSDCtrlInit
+                0x402f9190       0x30 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f9190                MMCSDCtrlInit
+ .text.MMCSDCardPresent
+                0x402f91c0       0x30 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f91c0                MMCSDCardPresent
+ .text.MMCSDIntEnable
+                0x402f91f0       0x2c ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f91f0                MMCSDIntEnable
+ .text.MMCSDCardInit
+                0x402f921c      0x784 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f921c                MMCSDCardInit
+ .text.MMCSDWriteCmdSend
+                0x402f99a0      0x184 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f99a0                MMCSDWriteCmdSend
+ .text.MMCSDReadCmdSend
+                0x402f9b24      0x184 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                0x402f9b24                MMCSDReadCmdSend
+ .text.memcmp   0x402f9ca8       0xb4 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcmp.o)
+                0x402f9ca8                memcmp
+ .text.memcpy   0x402f9d5c       0xf4 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+                0x402f9d5c                memcpy
+ .text.memset   0x402f9e50       0xf8 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memset.o)
+                0x402f9e50                memset
+ .text.strcmp   0x402f9f48       0x94 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+                0x402f9f48                strcmp
+ .text.strcmp_unaligned
+                0x402f9fdc      0x19c /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+ .text          0x402fa178      0x114 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+                0x402fa178                __udivsi3
+                0x402fa178                __aeabi_uidiv
+                0x402fa26c                __aeabi_uidivmod
+ .text          0x402fa28c      0x148 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+                0x402fa28c                __aeabi_idiv
+                0x402fa28c                __divsi3
+                0x402fa3b4                __aeabi_idivmod
+ .text          0x402fa3d4        0x4 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+                0x402fa3d4                __aeabi_ldiv0
+                0x402fa3d4                __aeabi_idiv0
+ .text.UARTOperatingModeSelect
+                0x402fa3d8       0x84 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa3d8                UARTOperatingModeSelect
+ .text.UARTDivisorValCompute
+                0x402fa45c      0x104 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa45c                UARTDivisorValCompute
+ .text.UARTDivisorLatchWrite
+                0x402fa560      0x210 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa560                UARTDivisorLatchWrite
+ .text.UARTDivisorLatchDisable
+                0x402fa770       0x38 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa770                UARTDivisorLatchDisable
+ .text.UARTRegConfigModeEnable
+                0x402fa7a8       0x9c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa7a8                UARTRegConfigModeEnable
+ .text.UARTBreakCtl
+                0x402fa844       0x60 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa844                UARTBreakCtl
+ .text.UARTLineCharacConfig
+                0x402fa8a4       0xa4 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa8a4                UARTLineCharacConfig
+ .text.UARTFIFOConfig
+                0x402fa948      0x480 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fa948                UARTFIFOConfig
+ .text.UARTFIFORegisterWrite
+                0x402fadc8       0xc0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fadc8                UARTFIFORegisterWrite
+ .text.UARTEnhanFuncEnable
+                0x402fae88       0x88 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fae88                UARTEnhanFuncEnable
+ .text.UARTEnhanFuncBitValRestore
+                0x402faf10       0x8c ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402faf10                UARTEnhanFuncBitValRestore
+ .text.UARTSubConfigTCRTLRModeEn
+                0x402faf9c      0x124 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402faf9c                UARTSubConfigTCRTLRModeEn
+ .text.UARTTCRTLRBitValRestore
+                0x402fb0c0      0x128 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fb0c0                UARTTCRTLRBitValRestore
+ .text.UARTCharPut
+                0x402fb1e8       0x78 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fb1e8                UARTCharPut
+ .text.UARTModuleReset
+                0x402fb260       0x54 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x402fb260                UARTModuleReset
+ *(.rodata*)
+ .rodata        0x402fb2b4      0x174 Debug_MMCSD/bl_hsmmcsd.o
+ .rodata        0x402fb428       0x6c Debug_MMCSD/bl_main.o
+ .rodata        0x402fb494       0x10 Debug_MMCSD/bl_platform.o
+ .rodata        0x402fb4a4       0x18 Debug_MMCSD/fat_mmcsd.o
+ .rodata        0x402fb4bc        0xc Debug_MMCSD/ff.o
+ .rodata        0x402fb4c8       0x30 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .rodata        0x402fb4f8       0x60 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+
+.glue_7         0x402fb558        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x402fb558        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x402fb558        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x402fb558        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x402fb558        0x0
+ .iplt          0x00000000        0x0 Debug_MMCSD/bl_copy.o
+
+.rel.dyn        0x402fb558        0x0
+ .rel.iplt      0x00000000        0x0 Debug_MMCSD/bl_copy.o
+
+.data           0x402fb558       0x58
+                0x402fb558                . = ALIGN (0x4)
+ *(.data*)
+ .data.deviceType
+                0x402fb558        0x4 Debug_MMCSD/bl_platform.o
+                0x402fb558                deviceType
+ .data.oppTable
+                0x402fb55c       0x50 Debug_MMCSD/bl_platform.o
+                0x402fb55c                oppTable
+ .data.boardId  0x402fb5ac        0x4 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+                0x402fb5ac                boardId
+
+.igot.plt       0x402fb5b0        0x0
+ .igot.plt      0x00000000        0x0 Debug_MMCSD/bl_copy.o
+
+.bss            0x402fb600      0x879
+                0x402fb600                . = ALIGN (0x4)
+                0x402fb600                _bss_start = .
+ *(.bss*)
+ .bss.xferPend  0x402fb600        0x4 Debug_MMCSD/bl_hsmmcsd.o
+                0x402fb600                xferPend
+ .bss.cmdCompFlag
+                0x402fb604        0x4 Debug_MMCSD/bl_hsmmcsd.o
+                0x402fb604                cmdCompFlag
+ .bss.cmdTimeout
+                0x402fb608        0x4 Debug_MMCSD/bl_hsmmcsd.o
+                0x402fb608                cmdTimeout
+ .bss.errFlag   0x402fb60c        0x4 Debug_MMCSD/bl_hsmmcsd.o
+                0x402fb60c                errFlag
+ .bss.hsmmcsd_dataLen
+                0x402fb610        0x4 Debug_MMCSD/bl_hsmmcsd.o
+                0x402fb610                hsmmcsd_dataLen
+ .bss.hsmmcsd_buffer
+                0x402fb614        0x4 Debug_MMCSD/bl_hsmmcsd.o
+                0x402fb614                hsmmcsd_buffer
+ *fill*         0x402fb618        0x8 00
+ .bss.g_cTmpBuf
+                0x402fb620      0x200 Debug_MMCSD/bl_hsmmcsd.o
+ .bss.g_sFatFs  0x402fb820      0x240 Debug_MMCSD/bl_hsmmcsd.o
+ .bss.g_sFileObject
+                0x402fba60      0x248 Debug_MMCSD/bl_hsmmcsd.o
+ .bss.appEntry  0x402fbca8        0x4 Debug_MMCSD/bl_main.o
+ .bss.entryPoint
+                0x402fbcac        0x4 Debug_MMCSD/bl_main.o
+                0x402fbcac                entryPoint
+ .bss.isBBB     0x402fbcb0        0x1 Debug_MMCSD/bl_platform.o
+                0x402fbcb0                isBBB
+ *fill*         0x402fbcb1        0x3 00
+ .bss.FatFs     0x402fbcb4        0x8 Debug_MMCSD/ff.o
+ .bss.fsid      0x402fbcbc        0x2 Debug_MMCSD/ff.o
+ *fill*         0x402fbcbe       0x42 00
+ .bss.dataBuffer
+                0x402fbd00       0x80 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ *(COMMON)
+ COMMON         0x402fbd80       0xb0 Debug_MMCSD/bl_hsmmcsd.o
+                0x402fbd80                sdCard
+                0x402fbde0                ctrlInfo
+ COMMON         0x402fbe30       0x20 Debug_MMCSD/bl_platform.o
+                0x402fbe30                dataToSlave
+                0x402fbe34                rCount
+                0x402fbe38                numOfBytes
+                0x402fbe3c                tCount
+                0x402fbe40                oppMaxIdx
+                0x402fbe44                deviceVersion
+                0x402fbe48                dataFromSlave
+                0x402fbe4c                freqMultDDR
+ COMMON         0x402fbe50       0x18 Debug_MMCSD/fat_mmcsd.o
+                0x402fbe50                fat_devices
+ COMMON         0x402fbe68       0x11 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+                0x402fbe68                boardName
+                0x402fbe70                boardData
+                0x402fbe74                boardVersion
+                0x402fbe79                _bss_end = .
+
+.heap           0x402fbe79      0x803
+                0x402fbe7c                . = ALIGN (0x4)
+ *fill*         0x402fbe79        0x3 00
+                0x402fbe7c                __end__ = .
+                0x402fbe7c                end = __end__
+                0x402fbe7c                __HeapBase = __end__
+ *(.heap*)
+                0x402fc67c                . = (. + 0x800)
+ *fill*         0x402fbe7c      0x800 00
+                0x402fc67c                __HeapLimit = .
+
+.stack          0x402fc67c      0x884
+                0x402fc700                . = ALIGN (0x100)
+ *fill*         0x402fc67c       0x84 00
+                0x402fc700                __StackLimit = .
+ *(.stack*)
+                0x402fcf00                . = (. + 0x800)
+ *fill*         0x402fc700      0x800 00
+                0x402fcf00                __StackTop = .
+                0x402fcf00                _stack = __StackTop
+LOAD ../..//bootloader/binary/drivers/Debug/libdrivers.a
+LOAD ../..//bootloader/binary/utils/Debug/libutils.a
+LOAD ../..//bootloader/binary/platform/Debug/libplatform.a
+LOAD ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a
+LOAD /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a
+LOAD /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a
+LOAD ../..//bootloader/binary/drivers/Debug/libdrivers.a
+LOAD ../..//bootloader/binary/utils/Debug/libutils.a
+LOAD ../..//bootloader/binary/platform/Debug/libplatform.a
+LOAD ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a
+LOAD /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a
+LOAD /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a
+OUTPUT(Debug_MMCSD/boot.out elf32-littlearm)
+
+.debug_info     0x00000000     0x7b18
+ .debug_info    0x00000000       0x7d Debug_MMCSD/bl_copy.o
+ .debug_info    0x0000007d      0xa69 Debug_MMCSD/bl_hsmmcsd.o
+ .debug_info    0x00000ae6       0x7d Debug_MMCSD/bl_init.o
+ .debug_info    0x00000b63       0xcb Debug_MMCSD/bl_main.o
+ .debug_info    0x00000c2e      0x66e Debug_MMCSD/bl_platform.o
+ .debug_info    0x0000129c      0x1b3 Debug_MMCSD/cache.o
+ .debug_info    0x0000144f       0x77 Debug_MMCSD/cp15.o
+ .debug_info    0x000014c6       0x7f Debug_MMCSD/device.o
+ .debug_info    0x00001545      0x764 Debug_MMCSD/fat_mmcsd.o
+ .debug_info    0x00001ca9     0x1414 Debug_MMCSD/ff.o
+ .debug_info    0x000030bd      0x7b3 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .debug_info    0x00003870      0xa6d ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_info    0x000042dd      0x7fb ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .debug_info    0x00004ad8      0x1bc ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .debug_info    0x00004c94      0x69a ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .debug_info    0x0000532e       0xbb ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .debug_info    0x000053e9      0x117 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .debug_info    0x00005500       0xdd ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .debug_info    0x000055dd       0x94 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_info    0x00005671       0x64 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .debug_info    0x000056d5      0x156 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_info    0x0000582b       0x7e ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .debug_info    0x000058a9      0x56e ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .debug_info    0x00005e17      0x856 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .debug_info    0x0000666d     0x14ab ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_abbrev   0x00000000     0x1667
+ .debug_abbrev  0x00000000       0x60 Debug_MMCSD/bl_copy.o
+ .debug_abbrev  0x00000060      0x21e Debug_MMCSD/bl_hsmmcsd.o
+ .debug_abbrev  0x0000027e       0x14 Debug_MMCSD/bl_init.o
+ .debug_abbrev  0x00000292       0xa4 Debug_MMCSD/bl_main.o
+ .debug_abbrev  0x00000336      0x182 Debug_MMCSD/bl_platform.o
+ .debug_abbrev  0x000004b8       0x7a Debug_MMCSD/cache.o
+ .debug_abbrev  0x00000532       0x14 Debug_MMCSD/cp15.o
+ .debug_abbrev  0x00000546       0x66 Debug_MMCSD/device.o
+ .debug_abbrev  0x000005ac      0x171 Debug_MMCSD/fat_mmcsd.o
+ .debug_abbrev  0x0000071d      0x1df Debug_MMCSD/ff.o
+ .debug_abbrev  0x000008fc      0x124 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .debug_abbrev  0x00000a20      0x14d ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_abbrev  0x00000b6d      0x1a0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .debug_abbrev  0x00000d0d       0xbd ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .debug_abbrev  0x00000dca      0x186 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .debug_abbrev  0x00000f50       0x5e ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .debug_abbrev  0x00000fae       0xa6 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .debug_abbrev  0x00001054       0x7a ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .debug_abbrev  0x000010ce       0x62 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_abbrev  0x00001130       0x39 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .debug_abbrev  0x00001169       0xa3 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_abbrev  0x0000120c       0x62 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .debug_abbrev  0x0000126e      0x13e ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .debug_abbrev  0x000013ac      0x16d ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .debug_abbrev  0x00001519      0x14e ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_loc      0x00000000     0x3814
+ .debug_loc     0x00000000       0x58 Debug_MMCSD/bl_copy.o
+ .debug_loc     0x00000058      0x160 Debug_MMCSD/bl_hsmmcsd.o
+ .debug_loc     0x000001b8       0x58 Debug_MMCSD/bl_main.o
+ .debug_loc     0x00000210      0x4fc Debug_MMCSD/bl_platform.o
+ .debug_loc     0x0000070c      0x1b8 Debug_MMCSD/cache.o
+ .debug_loc     0x000008c4       0x58 Debug_MMCSD/device.o
+ .debug_loc     0x0000091c      0x108 Debug_MMCSD/fat_mmcsd.o
+ .debug_loc     0x00000a24      0x528 Debug_MMCSD/ff.o
+ .debug_loc     0x00000f4c      0x4fc ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .debug_loc     0x00001448      0x7bc ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_loc     0x00001c04      0x4d0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .debug_loc     0x000020d4       0xb0 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .debug_loc     0x00002184      0x274 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .debug_loc     0x000023f8       0x2c ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .debug_loc     0x00002424       0xdc ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .debug_loc     0x00002500       0xdc ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .debug_loc     0x000025dc       0x84 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_loc     0x00002660       0x58 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .debug_loc     0x000026b8      0x108 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_loc     0x000027c0       0x58 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .debug_loc     0x00002818      0x108 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .debug_loc     0x00002920      0x23c ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .debug_loc     0x00002b5c      0xcb8 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_aranges  0x00000000      0xc98
+ .debug_aranges
+                0x00000000       0x28 Debug_MMCSD/bl_copy.o
+ .debug_aranges
+                0x00000028       0x58 Debug_MMCSD/bl_hsmmcsd.o
+ .debug_aranges
+                0x00000080       0x20 Debug_MMCSD/bl_init.o
+ .debug_aranges
+                0x000000a0       0x28 Debug_MMCSD/bl_main.o
+ .debug_aranges
+                0x000000c8      0x100 Debug_MMCSD/bl_platform.o
+ .debug_aranges
+                0x000001c8       0x68 Debug_MMCSD/cache.o
+ .debug_aranges
+                0x00000230       0x20 Debug_MMCSD/cp15.o
+ .debug_aranges
+                0x00000250       0x28 Debug_MMCSD/device.o
+ .debug_aranges
+                0x00000278       0x48 Debug_MMCSD/fat_mmcsd.o
+ .debug_aranges
+                0x000002c0      0x108 Debug_MMCSD/ff.o
+ .debug_aranges
+                0x000003c8      0x100 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .debug_aranges
+                0x000004c8      0x180 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_aranges
+                0x00000648       0xf8 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .debug_aranges
+                0x00000740       0x38 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .debug_aranges
+                0x00000778       0x88 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .debug_aranges
+                0x00000800       0x20 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .debug_aranges
+                0x00000820       0x40 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .debug_aranges
+                0x00000860       0x40 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .debug_aranges
+                0x000008a0       0x30 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_aranges
+                0x000008d0       0x28 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .debug_aranges
+                0x000008f8       0x48 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_aranges
+                0x00000940       0x28 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .debug_aranges
+                0x00000968       0x48 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .debug_aranges
+                0x000009b0       0x80 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .debug_aranges
+                0x00000a30      0x268 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_ranges   0x00000000      0xae8
+ .debug_ranges  0x00000000       0x18 Debug_MMCSD/bl_copy.o
+ .debug_ranges  0x00000018       0x48 Debug_MMCSD/bl_hsmmcsd.o
+ .debug_ranges  0x00000060       0x18 Debug_MMCSD/bl_main.o
+ .debug_ranges  0x00000078       0xf0 Debug_MMCSD/bl_platform.o
+ .debug_ranges  0x00000168       0x58 Debug_MMCSD/cache.o
+ .debug_ranges  0x000001c0       0x18 Debug_MMCSD/device.o
+ .debug_ranges  0x000001d8       0x38 Debug_MMCSD/fat_mmcsd.o
+ .debug_ranges  0x00000210       0xf8 Debug_MMCSD/ff.o
+ .debug_ranges  0x00000308       0xf0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .debug_ranges  0x000003f8      0x170 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_ranges  0x00000568       0xe8 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .debug_ranges  0x00000650       0x28 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .debug_ranges  0x00000678       0x78 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .debug_ranges  0x000006f0       0x10 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .debug_ranges  0x00000700       0x30 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .debug_ranges  0x00000730       0x30 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .debug_ranges  0x00000760       0x20 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_ranges  0x00000780       0x18 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .debug_ranges  0x00000798       0x38 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_ranges  0x000007d0       0x18 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .debug_ranges  0x000007e8       0x38 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .debug_ranges  0x00000820       0x70 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .debug_ranges  0x00000890      0x258 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_line     0x00000000     0x3ac6
+ .debug_line    0x00000000       0x68 Debug_MMCSD/bl_copy.o
+ .debug_line    0x00000068      0x23a Debug_MMCSD/bl_hsmmcsd.o
+ .debug_line    0x000002a2       0x7f Debug_MMCSD/bl_init.o
+ .debug_line    0x00000321       0x71 Debug_MMCSD/bl_main.o
+ .debug_line    0x00000392      0x54c Debug_MMCSD/bl_platform.o
+ .debug_line    0x000008de      0x101 Debug_MMCSD/cache.o
+ .debug_line    0x000009df      0x17e Debug_MMCSD/cp15.o
+ .debug_line    0x00000b5d       0x6c Debug_MMCSD/device.o
+ .debug_line    0x00000bc9      0x149 Debug_MMCSD/fat_mmcsd.o
+ .debug_line    0x00000d12      0xa22 Debug_MMCSD/ff.o
+ .debug_line    0x00001734      0x2fd ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .debug_line    0x00001a31      0x3ee ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_line    0x00001e1f      0x337 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .debug_line    0x00002156       0xd3 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .debug_line    0x00002229      0x637 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .debug_line    0x00002860       0x74 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .debug_line    0x000028d4      0x102 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .debug_line    0x000029d6      0x144 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .debug_line    0x00002b1a      0x1e9 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_line    0x00002d03       0x85 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .debug_line    0x00002d88       0xd4 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_line    0x00002e5c      0x16c ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .debug_line    0x00002fc8      0x147 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .debug_line    0x0000310f      0x271 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .debug_line    0x00003380      0x746 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_str      0x00000000     0x292a
+ .debug_str     0x00000000       0xc0 Debug_MMCSD/bl_copy.o
+                                 0xd7 (size before relaxing)
+ .debug_str     0x000000c0      0x537 Debug_MMCSD/bl_hsmmcsd.o
+                                0x64d (size before relaxing)
+ .debug_str     0x000005f7       0x4b Debug_MMCSD/bl_main.o
+                                 0xea (size before relaxing)
+ .debug_str     0x00000642      0x305 Debug_MMCSD/bl_platform.o
+                                0x42a (size before relaxing)
+ .debug_str     0x00000947      0x118 Debug_MMCSD/cache.o
+                                0x199 (size before relaxing)
+ .debug_str     0x00000a5f       0x4e Debug_MMCSD/device.o
+                                 0xeb (size before relaxing)
+ .debug_str     0x00000aad       0xd1 Debug_MMCSD/fat_mmcsd.o
+                                0x3c6 (size before relaxing)
+ .debug_str     0x00000b7e      0x297 Debug_MMCSD/ff.o
+                                0x5e7 (size before relaxing)
+ .debug_str     0x00000e15      0x341 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+                                0x3b6 (size before relaxing)
+ .debug_str     0x00001156      0x429 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+                                0x4f2 (size before relaxing)
+ .debug_str     0x0000157f      0x300 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+                                0x3c9 (size before relaxing)
+ .debug_str     0x0000187f       0xdd ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+                                0x161 (size before relaxing)
+ .debug_str     0x0000195c      0x1d6 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+                                0x29d (size before relaxing)
+ .debug_str     0x00001b32       0x7d ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+                                0x160 (size before relaxing)
+ .debug_str     0x00001baf       0x80 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+                                0x145 (size before relaxing)
+ .debug_str     0x00001c2f       0xaf ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+                                0x150 (size before relaxing)
+ .debug_str     0x00001cde       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+                                0x112 (size before relaxing)
+ .debug_str     0x00001d4f       0x5e ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+                                 0xf6 (size before relaxing)
+ .debug_str     0x00001dad       0xd6 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+                                0x17c (size before relaxing)
+ .debug_str     0x00001e83       0x61 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+                                0x102 (size before relaxing)
+ .debug_str     0x00001ee4       0xff ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+                                0x34b (size before relaxing)
+ .debug_str     0x00001fe3       0xe8 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+                                0x3b2 (size before relaxing)
+ .debug_str     0x000020cb      0x85f ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                                0x956 (size before relaxing)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 Debug_MMCSD/bl_copy.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 Debug_MMCSD/bl_hsmmcsd.o
+ .comment       0x00000000       0x71 Debug_MMCSD/bl_main.o
+ .comment       0x00000000       0x71 Debug_MMCSD/bl_platform.o
+ .comment       0x00000000       0x71 Debug_MMCSD/cache.o
+ .comment       0x00000000       0x71 Debug_MMCSD/device.o
+ .comment       0x00000000       0x71 Debug_MMCSD/fat_mmcsd.o
+ .comment       0x00000000       0x71 Debug_MMCSD/ff.o
+ .comment       0x00000000       0x71 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .comment       0x00000000       0x71 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.ARM.attributes
+                0x00000000       0x35
+ .ARM.attributes
+                0x00000000       0x37 Debug_MMCSD/bl_copy.o
+ .ARM.attributes
+                0x00000037       0x37 Debug_MMCSD/bl_hsmmcsd.o
+ .ARM.attributes
+                0x0000006e       0x1f Debug_MMCSD/bl_init.o
+ .ARM.attributes
+                0x0000008d       0x37 Debug_MMCSD/bl_main.o
+ .ARM.attributes
+                0x000000c4       0x37 Debug_MMCSD/bl_platform.o
+ .ARM.attributes
+                0x000000fb       0x37 Debug_MMCSD/cache.o
+ .ARM.attributes
+                0x00000132       0x1f Debug_MMCSD/cp15.o
+ .ARM.attributes
+                0x00000151       0x37 Debug_MMCSD/device.o
+ .ARM.attributes
+                0x00000188       0x37 Debug_MMCSD/fat_mmcsd.o
+ .ARM.attributes
+                0x000001bf       0x37 Debug_MMCSD/ff.o
+ .ARM.attributes
+                0x000001f6       0x37 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .ARM.attributes
+                0x0000022d       0x37 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .ARM.attributes
+                0x00000264       0x37 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .ARM.attributes
+                0x0000029b       0x37 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .ARM.attributes
+                0x000002d2       0x37 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .ARM.attributes
+                0x00000309       0x37 ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .ARM.attributes
+                0x00000340       0x37 ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .ARM.attributes
+                0x00000377       0x37 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .ARM.attributes
+                0x000003ae       0x37 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .ARM.attributes
+                0x000003e5       0x37 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .ARM.attributes
+                0x0000041c       0x37 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .ARM.attributes
+                0x00000453       0x37 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .ARM.attributes
+                0x0000048a       0x37 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .ARM.attributes
+                0x000004c1       0x37 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .ARM.attributes
+                0x000004f8       0x30 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcmp.o)
+ .ARM.attributes
+                0x00000528       0x30 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000558       0x30 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000588       0x30 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x000005b8       0x18 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000005d0       0x18 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x000005e8       0x18 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000600       0x37 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+
+.debug_frame    0x00000000     0x2358
+ .debug_frame   0x00000000       0x48 Debug_MMCSD/bl_copy.o
+ .debug_frame   0x00000048       0xec Debug_MMCSD/bl_hsmmcsd.o
+ .debug_frame   0x00000134       0x44 Debug_MMCSD/bl_main.o
+ .debug_frame   0x00000178      0x314 Debug_MMCSD/bl_platform.o
+ .debug_frame   0x0000048c      0x128 Debug_MMCSD/cache.o
+ .debug_frame   0x000005b4       0x40 Debug_MMCSD/device.o
+ .debug_frame   0x000005f4       0xac Debug_MMCSD/fat_mmcsd.o
+ .debug_frame   0x000006a0      0x350 Debug_MMCSD/ff.o
+ .debug_frame   0x000009f0      0x2c8 ../..//bootloader/binary/drivers/Debug/libdrivers.a(gpio_v2.o)
+ .debug_frame   0x00000cb8      0x44c ../..//bootloader/binary/drivers/Debug/libdrivers.a(hsi2c.o)
+ .debug_frame   0x00001104      0x2c0 ../..//bootloader/binary/drivers/Debug/libdrivers.a(hs_mmcsd.o)
+ .debug_frame   0x000013c4       0x74 ../..//bootloader/binary/utils/Debug/libutils.a(board.o)
+ .debug_frame   0x00001438      0x1a8 ../..//bootloader/binary/utils/Debug/libutils.a(uartStdio.o)
+ .debug_frame   0x000015e0       0x2c ../..//bootloader/binary/platform/Debug/libplatform.a(board.o)
+ .debug_frame   0x0000160c       0x9c ../..//bootloader/binary/platform/Debug/libplatform.a(eeprom.o)
+ .debug_frame   0x000016a8       0x88 ../..//bootloader/binary/platform/Debug/libplatform.a(gpio.o)
+ .debug_frame   0x00001730       0x58 ../..//bootloader/binary/platform/Debug/libplatform.a(hsi2c.o)
+ .debug_frame   0x00001788       0x40 ../..//bootloader/binary/platform/Debug/libplatform.a(hs_mmcsd.o)
+ .debug_frame   0x000017c8       0xb8 ../..//bootloader/binary/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_frame   0x00001880       0x40 ../..//bootloader/binary/platform/Debug/libplatform.a(uart.o)
+ .debug_frame   0x000018c0       0xb8 ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(hs_mmcsdlib.o)
+ .debug_frame   0x00001978      0x17c ../..//bootloader/binary/mmcsdlib/Debug/libmmcsd.a(mmcsd_proto.o)
+ .debug_frame   0x00001af4       0x28 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcmp.o)
+ .debug_frame   0x00001b1c       0x2c /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memcpy.o)
+ .debug_frame   0x00001b48       0x28 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-memset.o)
+ .debug_frame   0x00001b70       0x30 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/arm-none-eabi/lib//libc.a(lib_a-strcmp.o)
+ .debug_frame   0x00001ba0       0x20 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001bc0       0x20 /home/jacob/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+ .debug_frame   0x00001be0      0x778 ../..//bootloader/binary/drivers/Debug/libdrivers.a(uart_irda_cir.o)
