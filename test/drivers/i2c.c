@@ -15,7 +15,7 @@
 #include "types.h"
 
 /* For Debugging */
-#include <stdio.h>
+#include "dbg.h" 
 
 /* CLOCK CONFIGURATION PARAMETER
  * Prescale Sampling Clock Divider Value 
@@ -23,9 +23,9 @@
  * from the Periphereal PLL output (see figure 8-11 in TRM) so it needs
  * to be divided down according to SYS_CLK/(PSC_DIV+1) = 12MHz 
  */
-#define SCLK (48000000) /* hz */
-#define ICLK (12000000) /* hz */
-#define PSC_DIV (SCLK/ICLK - 1) 
+#define SCLK (48000000) /* hz (PPL OUTPUT CLOCK? */
+#define ICLK (12000000) /* hz (I2C CLOCK?) */
+#define PSC_DIV (SCLK/ICLK - 1) /* GIVES US A VALUE OF 3?
 
 /* Configuration Bits */
 #define I2C_EN (0x1 << 15)
@@ -60,9 +60,11 @@ void i2c_init(struct i2c *i2c_port, unsigned int scl_freq)
 	writel(PSC_DIV, &i2c_port->psc);
 		
 	/* set the SCLL and SCLH registers to obtain the desired output freq */
-	divider = scl_freq/ICLK/2;
+	divider = ICLK/scl_freq/2;
 	writel(divider-7, &i2c_port->scll);
 	writel(divider-5, &i2c_port->sclh);
+	PRINT("SCLL = 0x%X\n\r", i2c_port->scll);
+	PRINT("SCLH = 0x%X\n\r", i2c_port->sclh);
 	
 	i2c_enable(i2c_port);
 
@@ -72,6 +74,9 @@ void i2c_init(struct i2c *i2c_port, unsigned int scl_freq)
 	/* set port to master mode */
 	i2c_con = readl(&i2c_port->con);
 	writel((i2c_con | MST), &i2c_port->con);	
+	PRINT("CON_ADDRES = 0x%X\n\r", &i2c_port->con);
+	PRINT("CON = 0x%X\n\r", i2c_port->con);
+
 }
 
 /* -- i2c_enable ---------------------------------------------------------
@@ -85,7 +90,7 @@ void i2c_enable(struct i2c *i2c_port)
 	writel((i2c_con | I2C_EN), &i2c_port->con);
 }
 
-/* -- i2c_diable ---------------------------------------------------------
+/* -- i2c_diSable ---------------------------------------------------------
  * This function disables the passed i2c port by clearing the enable bit
  * in the configuration register.
  * ---------------------------------------------------------------------*/
@@ -169,9 +174,14 @@ void i2c_tx(struct i2c *i2c_port, char *data, int len)
 	int i2c_con;
 	int i;	
 
+
 	/* wait for i2c registers to be ready to access */
-	while(!(readl(&i2c_port->irqstatus_raw) & ARDY))
-		;	
+	/*while(!(readl(&i2c_port->irqstatus_raw) & ARDY))*/
+	{
+		/*PRINT("IRQSTATUS ADD = 0x%X\n\r", &i2c_port->irqstatus_raw);*/
+		/*PRINT("IRQSTATUS = 0x%X\n\r", i2c_port->irqstatus);	*/
+	}
+	
 	
 	/* clear out all status flags */
 	i2c_clear_flags(i2c_port);
@@ -190,6 +200,7 @@ void i2c_tx(struct i2c *i2c_port, char *data, int len)
 	/* wait for bus to fire up */
 	while(!i2c_busy(i2c_port))
 		;
+	PRINT("WE ARE HERE\n\r");
 
 	/* use the polling method to transfer a byte at a time */
 	for(i=len; i!=0; i--)
@@ -229,7 +240,7 @@ void i2c_rx(struct i2c *i2c_port, char *data, int len)
 	i2c_con = readl(&i2c_port->con);
 	writel((i2c_con & ~TRX), &i2c_port->con);
 
-	/* generate start condition */
+	/* generate start condition or restart if already started */
 	i2c_start(i2c_port);
 
 	/* wait for bus to fire up */

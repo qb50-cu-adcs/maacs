@@ -68,6 +68,7 @@
 #define CM_PER_GPMC_CLKCTRL			(CM_PER + 0x30)
 #define CM_PER_MMC0_CLKCTRL			(CM_PER + 0x3C)
 #define CM_PER_ELM_CLKCTRL			(CM_PER + 0x40)
+#define CM_PER_I2C2_CLKCTRL			(CM_PER + 0x44)
 #define CM_PER_I2C1_CLKCTRL			(CM_PER + 0x48)
 #define CM_PER_SPI0_CLKCTRL			(CM_PER + 0x4C)
 #define CM_PER_L4LS_CLKCTRL			(CM_PER + 0x60)

@@ -40,7 +40,7 @@ struct i2c
 	unsigned int syss;						/* 0x90 */
 	unsigned int buf;							/* 0x94 */
 	unsigned int cnt;							/* 0x98 */
-	unsigned int data;						/* 0x9C */
+	unsigned int data; 					/* 0x9C */
 	unsigned int res4;						/* 0xA0 */
 	unsigned int con;							/* 0xA4 */
 	unsigned int oa;							/* 0xA8 */
@@ -55,6 +55,7 @@ struct i2c
 	unsigned int oa3;							/* 0xCC */
 	unsigned int actoa;						/* 0xD0 */
 	unsigned int sblock;					/* 0xD4 */
+  
 };
 
 /* function prototypes */

@@ -322,6 +322,16 @@ static void enable_per_clocks(void)
 	while (readl(CM_WKUP_I2C0_CLKCTRL) != PRCM_MOD_EN)
 		;
 
+	/* i2c1 */
+	writel(PRCM_MOD_EN, CM_PER_I2C1_CLKCTRL);
+	while (readl(CM_PER_I2C1_CLKCTRL) != PRCM_MOD_EN)
+		;
+
+	/* i2c2 */
+	writel(PRCM_MOD_EN, CM_PER_I2C2_CLKCTRL);
+	while (readl(CM_PER_I2C2_CLKCTRL) != PRCM_MOD_EN)
+		;
+
 	/* gpio1 module */
 	writel(PRCM_MOD_EN, CM_PER_GPIO1_CLKCTRL);
 	while (readl(CM_PER_GPIO1_CLKCTRL) != PRCM_MOD_EN)
