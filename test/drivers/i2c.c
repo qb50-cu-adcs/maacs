@@ -30,9 +30,9 @@
 /* Configuration Bits */
 #define I2C_EN (0x1 << 15)
 #define MST		 (0x1 << 10)
-#define TRX		 (0x1 << 9)
-#define XSA 	 (0x1 << 8)
-#define STP		 (0x1 << 1)
+#define TRX		 (0x1 <<  9)
+#define XSA 	         (0x1 <<  8)
+#define STP		 (0x1 <<  1)
 #define STT		 (0x1)
 
 /* Raw Interrupt Status Bits */
