@@ -3,7 +3,7 @@
 ROOT=..
 echo Checking for SD card
 BOOT=$(ls /media)
-if [ "$BOOT" = "boot" ]; then
+if [ "$BOOT" = "root" ]; then
 	echo SD card present
 else
 	echo No SD card present. 
@@ -12,7 +12,7 @@ else
 fi
 
 echo Copying application file to SD card
-cp $ROOT/test/binary/test/Release/test_ti.bin /media/boot/app
+cp $ROOT/test/binary/test/Release/test_ti.bin /media/root/app
 echo unmounting SD card. Please remove.
 umount /dev/sdb1
 make clean

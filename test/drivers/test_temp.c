@@ -9,7 +9,7 @@
  * **********************************************************************/	
 
 #include <string.h>
-#include "uart0.h"
+#include "dbg.h"
 #include "test.h"
 #include "types.h"
 #include "io.h"
@@ -42,9 +42,9 @@ void temp_dir(void)
 	exit_dir = 0; /* reset exit condition */
 	while(!exit_dir)
 	{
-		uart0_puts(cdir);
+		dbg_puts(cdir);
 		get_cmd(cmd, CMD_LEN);
-		uart0_puts("\n\r");
+		dbg_puts("\n\r");
 		process_cmd(cmd);
 	}
 }
@@ -87,12 +87,12 @@ static void process_cmd(char *cmd)
 		{
 			exit_dir = 1;
 		}
-		else uart0_puts("Directory not Recognized\n\r");
+		else dbg_puts("Directory not Recognized\n\r");
 	}
 	else	
 	{
 		/* error message */
-		uart0_puts("Command not recognized\n\r");
+		dbg_puts("Command not recognized\n\r");
 	}
 }
 
@@ -104,7 +104,8 @@ static void process_cmd(char *cmd)
  ************************************************************************/
 static void cmd1_handler(char *arg)
 {
-	uart0_puts("temp command 1 entered\n\r");
+	dbg_puts("temp command 1 entered\n\r");
+	PRINT("CHNAGED it\n\r");
 }
 
 /** cmd2_handler *********************************************************
@@ -115,7 +116,7 @@ static void cmd1_handler(char *arg)
  ************************************************************************/
 static void cmd2_handler(char *arg)
 {
-	uart0_puts("temp command 2 entered\n\r");
+	dbg_puts("temp command 2 entered\n\r");
 }
 
 /** cmd3_handler *********************************************************
@@ -126,6 +127,6 @@ static void cmd2_handler(char *arg)
  ************************************************************************/
 static void cmd3_handler(char *arg)
 {
-	uart0_puts("temp command 3 entered\n\r");
+	dbg_puts("temp command 3 entered\n\r");
 }
 
