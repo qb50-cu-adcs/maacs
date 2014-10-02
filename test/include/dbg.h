@@ -39,6 +39,8 @@ char dbgstr[50];
 /* dbg prototypes */
 void dbg_setup(void);
 void dbg_puts(char *str);
+void dbg_putc(char c);
+char dbg_getc();
 
 /* STDIO low level functions */
 int _close(int file);

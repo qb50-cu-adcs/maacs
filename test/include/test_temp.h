@@ -11,6 +11,6 @@
 #define __TEST_TEMP_H
 
 /* function prototypes */
-void dir_temp(void);
+void temp_dir(void);
 
 #endif
