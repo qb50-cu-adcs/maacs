@@ -19,6 +19,7 @@
 
 /* Define Number of Bits of AD7991 Register Value */
 #define AD7991_REGISTERLENGTH	 8 
+#define AD7991_REGISTERRESULTLENGTH    16
 
 /* Define Capable Port Frequencies of AD7991 */
 #define AD7991_100KHZ	 (0) /* 100 kHz */
@@ -32,8 +33,7 @@
 #define AD7991_SAMPLE_DELAY		(1 << 0)
 
 /* Function Prototypes */
-void AD7991_Init(char deviceVersion, char sclFreq, struct i2c *i2c_port);
-void AD7991_SetConfigReg(char registerValue,char deviceVersion, struct i2c *i2c_port);
+void AD7991_Init(char registerValue,char deviceVersion, struct i2c *i2c_port);
 void AD7991_Read(short *convValue, char *channel,char deviceVersion, struct i2c *i2c_port);
 float AD7991_ConvToVolts(short rawSample, float vRef);
 
