@@ -50,6 +50,10 @@
 #define PER_PLL_M2 (5)
 #define DPLL_CLKDCOLDO_GATE_CTRL	(0x300) /* enable clock output */
 
+/* CM PER L4LS CLKSTCTRL Register Flags */
+#define CLKACTIVITY_I2C_FCLK (0x1 << 24)
+#define CLKACTIVITY_L4LS_GCLK (0x1 << 8)
+
 /* Clock Module (CM) Memory base address locations */
 #define CM_PER 		(0x44E00000)	/* CM Peipheral Registers */
 #define CM_WKUP 	(0x44E00400)	/* CM Wakeup Registers */
@@ -86,6 +90,7 @@
 #define CM_PER_TIMER6_CLKCTRL		(CM_PER + 0xF0)
 #define CM_PER_MMC1_CLKCTRL			(CM_PER + 0xF4)
 #define CM_PER_L4HS_CLKCTRL			(CM_PER + 0x120)
+#define CM_PER_OCPWP_L3_CLKSTCTRL (CM_PER + 0x12C)
 
 /* CM_WKUP Clock Module Wakeup Registers */
 /* TODO: fill in the rest of the register addresses */

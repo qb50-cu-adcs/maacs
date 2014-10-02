@@ -25,7 +25,7 @@
  */
 #define SCLK (48000000) /* hz (PPL OUTPUT CLOCK? */
 #define ICLK (12000000) /* hz (I2C CLOCK?) */
-#define PSC_DIV (SCLK/ICLK - 1) /* GIVES US A VALUE OF 3?
+#define PSC_DIV (SCLK/ICLK - 1) /* GIVES US A VALUE OF 3? */
 
 /* Configuration Bits */
 #define I2C_EN (0x1 << 15)
@@ -34,6 +34,12 @@
 #define XSA 	         (0x1 <<  8)
 #define STP		 (0x1 <<  1)
 #define STT		 (0x1)
+
+/* SYSC bits */
+#define SYSC_AUTOIDLE (0x1)
+#define SYSC_SRST			(0x1 << 1)
+#define SYSC_IDLEMODE	(0x3 << 3)
+#define SYSC_NOIDLE		(0x1 << 3)
 
 /* Raw Interrupt Status Bits */
 #define BB 		(0x1 << 12)
@@ -52,10 +58,15 @@
  * ---------------------------------------------------------------------*/
 void i2c_init(struct i2c *i2c_port, unsigned int scl_freq)
 {
-	int divider, i2c_con;
+	int divider;
 
+	/* Disable port to set up clocks */
 	i2c_disable(i2c_port);
+	i2c_reset(i2c_port);
 
+	/* Disable Auto Idle Setting */
+	and_regl(~SYSC_AUTOIDLE, &i2c_port->sysc);
+	
 	/* Set PSC value to obtain 12Mhz clock */
 	writel(PSC_DIV, &i2c_port->psc);
 		
@@ -63,21 +74,28 @@ void i2c_init(struct i2c *i2c_port, unsigned int scl_freq)
 	divider = ICLK/scl_freq/2;
 	writel(divider-7, &i2c_port->scll);
 	writel(divider-5, &i2c_port->sclh);
-	PRINT("SCLL = 0x%X\n\r", i2c_port->scll);
-	PRINT("SCLH = 0x%X\n\r", i2c_port->sclh);
-	
+		
+	/* enable the port */
 	i2c_enable(i2c_port);
 
 	/* verify that reset is complete and clocks are running */
 	while(!readl(&i2c_port->syss));
 	
 	/* set port to master mode */
-	i2c_con = readl(&i2c_port->con);
-	writel((i2c_con | MST), &i2c_port->con);	
-	PRINT("CON_ADDRES = 0x%X\n\r", &i2c_port->con);
-	PRINT("CON = 0x%X\n\r", i2c_port->con);
-
+	or_regl(MST, &i2c_port->con);	
+	
+	/* manually set ARDY after reset */
+	or_regl(ARDY, i2c_port->irqstatus_raw);
 }
+
+/* -- i2c_reset ----------------------------------------------------------
+ *
+ * ---------------------------------------------------------------------*/
+void i2c_reset(struct i2c *i2c_port)
+{
+	or_regl(SYSC_SRST, &i2c_port->sysc);
+}
+
 
 /* -- i2c_enable ---------------------------------------------------------
  * This function enables the passed i2c port by setting the enable bit 
@@ -85,9 +103,7 @@ void i2c_init(struct i2c *i2c_port, unsigned int scl_freq)
  * ---------------------------------------------------------------------*/
 void i2c_enable(struct i2c *i2c_port)
 {
-	unsigned int i2c_con;
-	i2c_con  = readl(&i2c_port->con);
-	writel((i2c_con | I2C_EN), &i2c_port->con);
+	or_regl(I2C_EN, &i2c_port->con);
 }
 
 /* -- i2c_diSable ---------------------------------------------------------
@@ -96,9 +112,7 @@ void i2c_enable(struct i2c *i2c_port)
  * ---------------------------------------------------------------------*/
 void i2c_disable(struct i2c *i2c_port)
 {
-	unsigned int i2c_con;
-	i2c_con  = readl(&i2c_port->con);
-	writel((i2c_con & ~I2C_EN), &i2c_port->con);
+	and_regl(~I2C_EN, &i2c_port->con);
 }	
 
 /* -- i2c_slave ----------------------------------------------------------
@@ -126,11 +140,7 @@ void i2c_slave(struct i2c *i2c_port, int slave_addr, int xsa)
  * ---------------------------------------------------------------------*/
 void i2c_start(struct i2c *i2c_port)
 {
-	int i2c_con;
-
-	/* set start bit in Configuration register */
-	i2c_con = readl(&i2c_port->con);
-	writel((i2c_con | STT), &i2c_port->con);
+	or_regl(STT, &i2c_port->con);
 }
 
 /* -- i2c_stop -----------------------------------------------------------
@@ -140,11 +150,7 @@ void i2c_start(struct i2c *i2c_port)
  * ---------------------------------------------------------------------*/
 void i2c_stop(struct i2c *i2c_port)
 {
-	int i2c_con;
-
-	/* set stop bit in Configuration register */
-	i2c_con = readl(&i2c_port->con);
-	writel((i2c_con | STP), &i2c_port->con);
+	or_regl(STP, &i2c_port->con);
 }
 
 /* -- i2c_busy -----------------------------------------------------------
@@ -171,25 +177,18 @@ void i2c_clear_flags(struct i2c *i2c_port)
  * ---------------------------------------------------------------------*/
 void i2c_tx(struct i2c *i2c_port, char *data, int len)
 {
-	int i2c_con;
 	int i;	
 
 
 	/* wait for i2c registers to be ready to access */
 	/*while(!(readl(&i2c_port->irqstatus_raw) & ARDY))*/
-	{
-		/*PRINT("IRQSTATUS ADD = 0x%X\n\r", &i2c_port->irqstatus_raw);*/
-		/*PRINT("IRQSTATUS = 0x%X\n\r", i2c_port->irqstatus);	*/
-	}
-	
+		/*;	*/
 	
 	/* clear out all status flags */
 	i2c_clear_flags(i2c_port);
 	
-
 	/* set transmit bit in configuration register */
-	i2c_con = readl(&i2c_port->con);
-	writel((i2c_con | TRX), &i2c_port->con);
+	or_regl(TRX, &i2c_port->con);
 
 	/* load transfer count */
 	writel(len, &i2c_port->cnt);
@@ -197,10 +196,9 @@ void i2c_tx(struct i2c *i2c_port, char *data, int len)
 	/* generate start condition */
 	i2c_start(i2c_port);
 	
-	/* wait for bus to fire up */
+	/* wait for bus to fire up TODO: check for ACK*/
 	while(!i2c_busy(i2c_port))
 		;
-	PRINT("WE ARE HERE\n\r");
 
 	/* use the polling method to transfer a byte at a time */
 	for(i=len; i!=0; i--)
@@ -223,12 +221,11 @@ void i2c_tx(struct i2c *i2c_port, char *data, int len)
  * ---------------------------------------------------------------------*/
 void i2c_rx(struct i2c *i2c_port, char *data, int len)
 {
-	int i2c_con;
 	int i;	
 
 	/* wait for i2c registers to be ready to access */
-	while(!(readl(&i2c_port->irqstatus_raw) & ARDY))
-		;	
+	/*while(!(readl(&i2c_port->irqstatus_raw) & ARDY))*/
+		/*;	*/
 	
 	/* load transfer count */
 	writel(len, &i2c_port->cnt);
@@ -237,13 +234,12 @@ void i2c_rx(struct i2c *i2c_port, char *data, int len)
 	i2c_clear_flags(i2c_port);
 	
 	/* clear transmit bit in configuration register */
-	i2c_con = readl(&i2c_port->con);
-	writel((i2c_con & ~TRX), &i2c_port->con);
+	and_regl(~TRX, &i2c_port->con);
 
 	/* generate start condition or restart if already started */
 	i2c_start(i2c_port);
 
-	/* wait for bus to fire up */
+	/* wait for bus to fire up TODO: check for ACK*/
 	while(!i2c_busy(i2c_port))
 		;	
 

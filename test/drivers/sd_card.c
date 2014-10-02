@@ -264,6 +264,7 @@ unsigned int sdcard_set_bus_freq(struct mmcsdInfo *mmcsd)
 {
 	struct cardInfo *card = mmcsd->card;
 	struct sdCmd cmd;
+
 	/* unsigned int freq; */
 	
 		/* set blklen for data transfer */

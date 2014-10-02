@@ -60,6 +60,7 @@ struct i2c
 
 /* function prototypes */
 void i2c_init(struct i2c *i2c_port, unsigned int scl_freq);
+void i2c_reset(struct i2c *i2c_port);
 void i2c_enable(struct i2c *i2c_port);
 void i2c_disable(struct i2c *i2c_port);
 void i2c_slave(struct i2c *i2c_port, int slave_addr, int xsa);
