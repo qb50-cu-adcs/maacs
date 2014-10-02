@@ -1,12 +1,13 @@
 /* ***********************************************************************
- * file: 		test_env.c
+ * file: 		test.c
  * author: 	jacob cook
  * created on: 5/27/2014
  * **********************************************************************/	
 
 #include <string.h>
-#include "uart0.h"
+#include "dbg.h"
 #include "test.h"
+#include "test_temp.h"
 #include "types.h"
 #include "io.h"
 
@@ -37,17 +38,17 @@ void test_main_menu(void)
 
 {
 	char cmd[CMD_LEN];
-	uart0_puts(MAACS);
+	dbg_puts(MAACS);
 		
-	uart0_puts("Welcome to the MAACS flight software test environment\n\r");
-	uart0_puts("please press any key to continue...\n\r\n\r");
-	uart0_getc();
+	dbg_puts("Welcome to the MAACS flight software test environment\n\r");
+	dbg_puts("please press any key to continue...\n\r\n\r");
+	dbg_getc();
 		
 	while(1)
 	{
-		uart0_puts("maacs$ ");
+		dbg_puts("maacs$ ");
 		get_cmd(cmd, CMD_LEN);
-		uart0_puts("\n\r");
+		dbg_puts("\n\r");
 		process_cmd(cmd);		
 	}
 }
@@ -72,12 +73,12 @@ static void process_cmd(char *cmd)
 	}
 	else if(!strcmp(cmd,"clear"))
 	{
-		uart0_puts("\033[2J");
+		dbg_puts("\033[2J");
 	}
 	else	
 	{
 		/* error message */
-		uart0_puts("Command not recognized\n\r");
+		dbg_puts("Command not recognized\n\r");
 	}
 }
 
@@ -91,8 +92,8 @@ void list_dir(char *dir[], int ndir)
 		/* list directory options */
 		for(i=0;i<ndir;i++)
 		{
-			uart0_puts((char *)dir[i]);
-			uart0_puts("\n\r");
+			dbg_puts((char *)dir[i]);
+			dbg_puts("\n\r");
 		}
 }		 
 
@@ -108,13 +109,13 @@ void change_dir(char *arg)
 {
 	if(!strcmp(arg,(char *)dir[0]))
 	{
-		uart0_puts((char *)dir[0]);
-		uart0_puts("\n\r");
+		dbg_puts((char *)dir[0]);
+		dbg_puts("\n\r");
 	}
 	else if(!strcmp(arg,(char *)dir[1]))
 	{
-		uart0_puts((char *)dir[1]);
-		uart0_puts("\n\r");
+		dbg_puts((char *)dir[1]);
+		dbg_puts("\n\r");
 	}
 	else if(!strcmp(arg, temp))
 	{
@@ -122,7 +123,7 @@ void change_dir(char *arg)
 	}
 	else 
 	{
-	 	uart0_puts("directory not recognized\n\r");
+	 	dbg_puts("directory not recognized\n\r");
 	}
 }
 
@@ -158,7 +159,7 @@ void get_cmd(char *cmd, int len)
 	unsigned char c;
 	unsigned int i = 0;
 
-	c = uart0_getc(); /* get user input */
+	c = dbg_getc(); /* get user input */
 	/* get input until the user pushes enter or the max length is reached. */
 	while(c != 13 && i < len-1)
 	{
@@ -170,16 +171,16 @@ void get_cmd(char *cmd, int len)
 			}
 			else
 			{
-				uart0_puts(backspace); /* show backspace on terminal */
+				dbg_puts(backspace); /* show backspace on terminal */
 				cmd[i--] = 0; /* erase last user input */
 			}
 		}
 		else
 		{
-			uart0_putc(c); /* echo input */
+			dbg_putc(c); /* echo input */
 			cmd[i++] = c; /* save data and increment pointer */
 		  cmd[i] = 0; /* move NULL character up */
 		}
-		c = uart0_getc(); 
+		c = dbg_getc(); 
 	}
 }	

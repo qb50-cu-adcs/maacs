@@ -33,13 +33,13 @@ static struct module_pin_mux i2c0_pin_mux[] = {
 	{-1}};
 
 static struct module_pin_mux i2c1_pin_mux[] = {
-	{CONF_I2C1_SDA, (MODE(3) | RXACTIVE | PULLUDDIS | PULLUP_EN | SLEWCTRL)},
-	{CONF_I2C1_SCL, (MODE(3) | RXACTIVE | PULLUDDIS | PULLUP_EN | SLEWCTRL)},
+	{CONF_I2C1_SDA, (MODE(2) | RXACTIVE | PULLUDDIS | PULLUP_EN | SLEWCTRL)},
+	{CONF_I2C1_SCL, (MODE(2) | RXACTIVE | PULLUDDIS | PULLUP_EN | SLEWCTRL)},
 	{-1}};
 
 static struct module_pin_mux i2c2_pin_mux[] = {
-	{CONF_I2C2_SDA, (MODE(2) | RXACTIVE | PULLUDEN | SLEWCTRL)},
-	{CONF_I2C2_SCL, (MODE(2) | RXACTIVE | PULLUDEN | SLEWCTRL)},
+	{CONF_I2C2_SDA, (MODE(3) | RXACTIVE | PULLUDDIS | PULLUP_EN | SLEWCTRL)},
+	{CONF_I2C2_SCL, (MODE(3) | RXACTIVE | PULLUDDIS | PULLUP_EN | SLEWCTRL)},
 	{-1}};
 
 static struct module_pin_mux mmc0_pin_mux[] = {

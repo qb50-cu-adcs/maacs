@@ -12,6 +12,7 @@
 #include "types.h"
 #include "io.h"
 #include "clocks.h" 
+#include "dbg.h"
 
 /* internal function prototypes */
 static void mpu_pll_config(void);
@@ -247,6 +248,7 @@ static void power_domain_wkup_transition(void)
 	writel(PRCM_FORCE_WAKEUP, CM_WKUP_CLKSTCTRL);
 	writel(PRCM_FORCE_WAKEUP, CM_PER_L4FW_CLKCTRL);
 	writel(PRCM_FORCE_WAKEUP, CM_PER_L3S_CLKSTCTRL);
+	writel(PRCM_FORCE_WAKEUP, CM_PER_OCPWP_L3_CLKSTCTRL);
 }
 
 /* -- enable_per_clocks --------------------------------------------------
@@ -322,6 +324,26 @@ static void enable_per_clocks(void)
 	while (readl(CM_WKUP_I2C0_CLKCTRL) != PRCM_MOD_EN)
 		;
 
+	/* i2c1 */
+	writel(PRCM_MOD_EN, CM_PER_I2C1_CLKCTRL);
+	while (readl(CM_PER_I2C1_CLKCTRL) != PRCM_MOD_EN)
+		;
+
+	/*if(readl(CM_PER_L4LS_CLKSTCTRL) & CLKACTIVITY_L4LS_GCLK)*/
+	/*{*/
+		/*PRINT("L4LS clock acitve");*/
+	/*}*/
+
+	/*if(readl(CM_PER_L4LS_CLKSTCTRL) & CLKACTIVITY_I2C_FCLK)*/
+	/*{*/
+		/*PRINT("I2C1 Clock active\n\r");*/
+	/*}*/
+
+	/* i2c2 */
+	writel(PRCM_MOD_EN, CM_PER_I2C2_CLKCTRL);
+	while (readl(CM_PER_I2C2_CLKCTRL) != PRCM_MOD_EN)
+		;
+
 	/* gpio1 module */
 	writel(PRCM_MOD_EN, CM_PER_GPIO1_CLKCTRL);
 	while (readl(CM_PER_GPIO1_CLKCTRL) != PRCM_MOD_EN)
@@ -335,11 +357,6 @@ static void enable_per_clocks(void)
 	/* gpio3 module */
 	writel(PRCM_MOD_EN, CM_PER_GPIO3_CLKCTRL);
 	while (readl(CM_PER_GPIO3_CLKCTRL) != PRCM_MOD_EN)
-		;
-
-	/* i2c1 USING */
-	writel(PRCM_MOD_EN, CM_PER_I2C1_CLKCTRL);
-	while (readl(CM_PER_I2C1_CLKCTRL) != PRCM_MOD_EN)
 		;
 
 	/* Ethernet NOT USING*/
