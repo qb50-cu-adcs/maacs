@@ -20,87 +20,80 @@
 /* Include Files for Debugging */
 #include "dbg.h" // For debug routines
 #include "io.h" /* Standard C library */ 
+
+/* Header for this .c file */
 #include "AD7991.h"
 
 /* Variable Definitions & Initializations */
 //char bitsNumber      = 0;
 char i2cSlaveAddress = 0;
 
-/* Initialize I2C peripheral
+/* Initialize I2C peripheral by writing data into the 
+ * Configuration Register
  *
- * 		@param deviceVersion should be one of two addresses in header
+ * 		@param deviceVersion should be one 
+ *               of two addresses in header
  *			0 - refers to AD7991-0
  *			1 - refers to AD7991-1 
  *
- * 		@param sclFreq should be one of two capable frequencies in header
- *			0 - refers to 100kHz
- *			1 - refers to 400kHz
- */
-void AD7991_Init(char deviceVersion, char sclFreq, struct i2c *ad7991_i2c) 
-{
-        unsigned int scl_freq = 0;
-
-	/* Ternary statement to determine which of the two frequencies to use */
-	scl_freq = (sclFreq) ? 400000 : 100000;
-	
-	/* Initialize passed I2C port to the frequency specified */
-	i2c_init(ad7991_i2c,scl_freq);
-	
-	/* Ternary statement to determine which built in address */
-	i2cSlaveAddress = (deviceVersion) ? AD7991_1_ADDRESS : AD7991_0_ADDRESS;
-	
-	/* Set AD7991 Slave Address */
-	i2c_slave(ad7991_i2c,i2cSlaveAddress,ADDR_7BIT);
-}
-
-/* Write Data into the Configuration Register
- *
- *		@param registerValue - Configuration Register Structure is defined 
- *								under "Internal Register Structure" on page
- *								20 of the AD7991 data sheet
+ *		@param registerValue - Configuration 
+ *               Register Structure is defined
+ *		 under "Internal Register Structure" 
+ *               on page 20 of the AD7991 data sheet
  *
  * http://www.analog.com/static/imported-files/data_sheets/AD7991_7995_7999.pdf
+ *
  */
-void AD7991_SetConfigReg(char registerValue,char deviceVersion,struct i2c *ad7991_i2c)
+void AD7991_Init(char registerValue,char deviceVersion,struct i2c *ad7991_i2c)
 {
-        //char *data = &registerValue;
-        
 	/* Ternary statement to determine which built in address */
 	i2cSlaveAddress = (deviceVersion) ? AD7991_1_ADDRESS : AD7991_0_ADDRESS;
+
+	/* Setting the specified ADC address as slave */
 	i2c_slave(ad7991_i2c,i2cSlaveAddress,ADDR_7BIT);
+
+	/* Writing to the ADC's 8 bit Configuration Register */
 	i2c_tx(ad7991_i2c,&registerValue,AD7991_REGISTERLENGTH); 
 	i2c_stop(ad7991_i2c);
 }
 
-/* Reads the High byte and the Low byte of the conversion
+/* Reads the High byte and the Low byte of the Conversion Register
  *
  *		@param convValue - It is used to store the conversion value. 
- *		@param channel - Stores the channel number for the current conversion.
+ *
+ *		@param channel - Stores the channel number for the current 
+ *                               conversion.
  */
-void AD7991_Read(short* convValue, char* channel,char deviceVersion,struct i2c *ad7991_i2c)
+void AD7991_Read(short* convValue, char* channel,char deviceVersion,
+		 struct i2c *ad7991_i2c)
 {
 	/* Variable Definitions & Initializations */
-	//char rxData[2] = {0, 0};
-        char rxData = 0;
-	//short		  convWord = 0;
+	char rxData[2] = {0x00, 0x00};
+	short convWord = 0;
 
 	/* Ternary statement to determine which built in address */
 	i2cSlaveAddress = (deviceVersion) ? AD7991_1_ADDRESS : AD7991_0_ADDRESS;
 	
-	/* Read data from AD7991 register and write it to rxData */
-	i2c_slave(ad7991_i2c,i2cSlaveAddress,ADDR_7BIT); // need to reslave before rx or tx
-	i2c_rx(ad7991_i2c,&rxData,2);
-	//convWord = (rxData[0] << 8) + rxData[1];
-	//*channel = (convWord & 0x3000) >> 12;
-	//*conValue = (convWord & 0x0FFF) >> (12 - AD7991_BITSNUMBER);
+	/* Need to re-enslave before tx/rx (in case others are using bus */
+	i2c_slave(ad7991_i2c,i2cSlaveAddress,ADDR_7BIT);
+
+	/* Reading from the ADC's 16 bit Conversion Register */
+	i2c_rx(ad7991_i2c,rxData,AD7991_REGISTERRESULTLENGTH);
+
+	/* Bit operations to restructure channel ID & value */
+	convWord = (rxData[0] << 8) + rxData[1];
+	*channel = (convWord & 0x3000) >> 12;
+	*convValue = (convWord & 0x0FFF) >> (12 - AD7991_BITSNUMBER);
 }
 
 /* Convert Raw Data sample (rxData?) to volts
  *
  * 		@param rawSample - The data sample.
- * 		@param vRef - The value of the voltage reference used by the device.
+ * 		@param vRef - The value of the voltage reference used by the 
+ *                            device.
  *
- * 		@return voltage - The result of the conversion expressed as volts.
+ * 		@return voltage - The result of the conversion expressed as 
+ *                                volts.
  */
 float AD7991_ConvToVolts(short rawSample, float vRef)
 {

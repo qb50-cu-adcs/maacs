@@ -264,7 +264,8 @@ unsigned int sdcard_set_bus_freq(struct mmcsdInfo *mmcsd)
 {
 	struct cardInfo *card = mmcsd->card;
 	struct sdCmd cmd;
-	/*unsigned int freq;*/
+
+	/* unsigned int freq; */
 	
 		/* set blklen for data transfer */
 		mmcsd_set_blklen(mmcsd->ctlr, 64);
@@ -284,7 +285,7 @@ unsigned int sdcard_set_bus_freq(struct mmcsdInfo *mmcsd)
 		if(sdcard_read_blk(mmcsd, 64, (unsigned int *)dataBuffer) == 0)
 			return 0;
 
-		/*freq = card->transpeed;*/
+		/* freq = card->transpeed; */
 
 		/* check High speed flag */		
 		if((dataBuffer[16] & 0xF) == SD_CMD6_GRP1_HS)
