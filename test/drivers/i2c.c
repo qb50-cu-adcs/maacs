@@ -23,9 +23,9 @@
  * from the Periphereal PLL output (see figure 8-11 in TRM) so it needs
  * to be divided down according to SYS_CLK/(PSC_DIV+1) = 12MHz 
  */
-#define SCLK (48000000) /* hz */
-#define ICLK (12000000) /* hz */
-#define PSC_DIV (SCLK/ICLK - 1) 
+#define SCLK (48000000) /* hz (PPL OUTPUT CLOCK? */
+#define ICLK (12000000) /* hz (I2C CLOCK?) */
+#define PSC_DIV (SCLK/ICLK - 1) /* GIVES US A VALUE OF 3? */
 
 /* Configuration Bits */
 #define I2C_EN (0x1 << 15)
@@ -61,8 +61,8 @@ void i2c_init(struct i2c *i2c_port, unsigned int scl_freq)
 	int divider;
 
 	/* Disable port to set up clocks */
-	/*i2c_reset(i2c_port);*/
 	i2c_disable(i2c_port);
+	i2c_reset(i2c_port);
 
 	/* Disable Auto Idle Setting */
 	and_regl(~SYSC_AUTOIDLE, &i2c_port->sysc);
@@ -106,7 +106,7 @@ void i2c_enable(struct i2c *i2c_port)
 	or_regl(I2C_EN, &i2c_port->con);
 }
 
-/* -- i2c_diable ---------------------------------------------------------
+/* -- i2c_diSable ---------------------------------------------------------
  * This function disables the passed i2c port by clearing the enable bit
  * in the configuration register.
  * ---------------------------------------------------------------------*/
@@ -179,10 +179,11 @@ void i2c_tx(struct i2c *i2c_port, char *data, int len)
 {
 	int i;	
 
+
 	/* wait for i2c registers to be ready to access */
 	/*while(!(readl(&i2c_port->irqstatus_raw) & ARDY))*/
 		/*;	*/
-
+	
 	/* clear out all status flags */
 	i2c_clear_flags(i2c_port);
 	
@@ -235,7 +236,7 @@ void i2c_rx(struct i2c *i2c_port, char *data, int len)
 	/* clear transmit bit in configuration register */
 	and_regl(~TRX, &i2c_port->con);
 
-	/* generate start condition */
+	/* generate start condition or restart if already started */
 	i2c_start(i2c_port);
 
 	/* wait for bus to fire up TODO: check for ACK*/

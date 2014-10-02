@@ -59,6 +59,8 @@ SOURCE=${MAACS_DRIVERS_SRC}/dbg.c \
 			 ${MAACS_DRIVERS_SRC}/timer.c\
 			 ${MAACS_DRIVERS_SRC}/pwm.c\
 			 ${MAACS_DRIVERS_SRC}/util.c\
+			 ${MAACS_DRIVERS_SRC}/test.c\
+			 ${MAACS_DRIVERS_SRC}/test_temp.c\
 			
 			 
 #

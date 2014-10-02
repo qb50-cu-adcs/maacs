@@ -329,16 +329,6 @@ static void enable_per_clocks(void)
 	while (readl(CM_PER_I2C1_CLKCTRL) != PRCM_MOD_EN)
 		;
 
-	/*if(readl(CM_PER_L4LS_CLKSTCTRL) & CLKACTIVITY_L4LS_GCLK)*/
-	/*{*/
-		/*PRINT("L4LS clock acitve");*/
-	/*}*/
-
-	/*if(readl(CM_PER_L4LS_CLKSTCTRL) & CLKACTIVITY_I2C_FCLK)*/
-	/*{*/
-		/*PRINT("I2C1 Clock active\n\r");*/
-	/*}*/
-
 	/* i2c2 */
 	writel(PRCM_MOD_EN, CM_PER_I2C2_CLKCTRL);
 	while (readl(CM_PER_I2C2_CLKCTRL) != PRCM_MOD_EN)
