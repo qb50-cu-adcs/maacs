@@ -84,8 +84,8 @@ void i2c_init(struct i2c *i2c_port, unsigned int scl_freq)
 	/* set port to master mode */
 	or_regl(MST, &i2c_port->con);	
 	
-	/* manually set ARDY after reset */
-	or_regl(ARDY, i2c_port->irqstatus_raw);
+	/* manually set ARDY after reset TODO: why is this causing problems */
+	/*or_regl(ARDY, i2c_port->irqstatus_raw);*/
 }
 
 /* -- i2c_reset ----------------------------------------------------------
