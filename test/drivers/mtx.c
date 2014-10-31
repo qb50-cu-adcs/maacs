@@ -237,7 +237,6 @@ int mtx_mult(struct mtx_matrix* mtx_a, struct mtx_matrix* mtx_b,
                 struct mtx_matrix* mtx_out){
     int row_a;
     int row_b;
-    int col_a;
     int col_b;
     float data;
 
@@ -396,9 +395,6 @@ float mtx_norm(struct mtx_matrix* mtx_a){
  */
 
 int mtx_inv(struct mtx_matrix* mtx_a, struct mtx_matrix* mtx_out){
-    int row;
-    int col;
-    float data;
     float scale;
     float det;
 

@@ -6,6 +6,8 @@
 #define ROT_ANGLE .5
 #define MIN_MINV_DET .00001
 
+#include "mtx.h"
+
 struct est_state{
 	struct mtx_matrix att_quaternion; //4x1
 	struct mtx_matrix att_err; //3x3
@@ -19,5 +21,5 @@ void body_rate_dcm_rot(struct mtx_matrix* body_rates, struct mtx_matrix* prior_d
 int est_sun_vec_ls(struct mtx_matrix* sun_sens_volt, struct mtx_matrix* sun_sens_norm, struct mtx_matrix* sun_vec);
 int est_quest_rp(struct mtx_matrix* b_k, struct mtx_matrix* eci_k, struct mtx_matrix* dcm_out);
 int est_quest(struct mtx_matrix* b_k, struct mtx_matrix* eci_k, struct mtx_matrix* dcm_out);
-//int est_simp(struct mtx_matrix* sun_sens_volt, struct mtx_matrix* sun_sens_norm, struct mtx_matrix* mag_sens, struct mtx_matrix* gyro_rates, struct mtx_matrix* sun_eci, struct mtx_matrix* mag_eci, struct att_state state, struct mtx_matrix* dcm_out);
-int create_att_state(struct est_state* state);
+int est_simp(struct mtx_matrix* sun_sens_volt, struct mtx_matrix* sun_sens_norm, struct mtx_matrix* mag_sens, struct mtx_matrix* sun_eci, struct mtx_matrix* mag_eci, struct est_state* state, struct mtx_matrix* dcm_out);
+void create_att_state(struct est_state* state);

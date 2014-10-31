@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-#include "mtx.h"
 #include "att_det.h"
 
 /*
@@ -60,7 +59,6 @@ void q_2_dcm(struct mtx_matrix* q, struct mtx_matrix* dcm){
 void dcm_2_q(struct mtx_matrix* dcm, struct mtx_matrix* q){
 	int max_qt_row;
     int max_qt_col;
-	float max_qt_val = 0;
     struct mtx_matrix qt;
 
     max_qt_row = 0;
@@ -72,7 +70,7 @@ void dcm_2_q(struct mtx_matrix* dcm, struct mtx_matrix* q){
     mtx_set(2,1,&qt,  .25*(1+2*mtx_get(2,2,dcm)-mtx_trace(dcm)));
     mtx_set(3,1,&qt,  .25*(1+2*mtx_get(3,3,dcm)-mtx_trace(dcm)));
     mtx_set(4,1,&qt,  .25*(1+mtx_trace(dcm)));
-    max_qt_val = mtx_max(&qt,&max_qt_row,&max_qt_col);
+    mtx_max(&qt,&max_qt_row,&max_qt_col);
 
 	switch(max_qt_row){
 		case 1 :
@@ -150,7 +148,7 @@ void body_rate_dcm_rot(struct mtx_matrix* body_rates, struct mtx_matrix* prior_d
  *
  *  result: mtx_matrix of eci->body frame rotation
  */
-int cal_sun_sens( struct mtx_matrix* sun_sens_volt, 
+void cal_sun_sens( struct mtx_matrix* sun_sens_volt, 
                   struct mtx_matrix* sun_sens_norm, 
                   struct mtx_matrix* sun_sens_cal){
 
@@ -241,7 +239,7 @@ int est_sun_vec_ls(struct mtx_matrix* sun_sens_volt,
 	}
 
 	/*Calculate Least Squares solution - inv(norm'*norm)*norm'*sun_sens*/
-    mtx_trans(sun_sens_norm,&norm_trans)==0;
+    mtx_trans(sun_sens_norm,&norm_trans);
     mtx_mult(&norm_trans, &sun_sens_cal, &sun_right);
     mtx_mult(&norm_trans, sun_sens_norm, &sun_left);
     mtx_inv(&sun_left, &sun_left_inverse);
@@ -366,7 +364,6 @@ int est_quest_rp(struct mtx_matrix* b_k, struct mtx_matrix* eci_k,
  */
 void rot_obs_vec(struct mtx_matrix* b_k, float theta, int axis,
                     struct mtx_matrix* b_out){
-    int i;
     struct mtx_matrix r;
     float theta_rad = M_PI*theta/180;
     mtx_create_eye(3,3,&r); 
@@ -437,6 +434,7 @@ int est_simp(struct mtx_matrix* sun_sens_volt, struct mtx_matrix* sun_sens_norm,
                     struct mtx_matrix* sun_eci, struct mtx_matrix* mag_eci, 
                     struct est_state* state, struct mtx_matrix* dcm_out){
 
+    int rv;
     struct mtx_matrix sun_vec;
     struct mtx_matrix b_k;
     struct mtx_matrix eci_k;
@@ -475,7 +473,8 @@ int est_simp(struct mtx_matrix* sun_sens_volt, struct mtx_matrix* sun_sens_norm,
         mtx_set(2,2,&eci_k, 0);
         mtx_set(3,2,&eci_k, 0);
     }
-    est_quest(&b_k,&eci_k,dcm_out);
+    rv = est_quest(&b_k,&eci_k,dcm_out);
+    return rv;
 }
 
 
@@ -486,7 +485,7 @@ int est_simp(struct mtx_matrix* sun_sens_volt, struct mtx_matrix* sun_sens_norm,
  *
  */
 
-int create_att_state(struct est_state* state){
+void create_att_state(struct est_state* state){
     mtx_create_val(3,3,&state->att_err,0);
     mtx_create_val(3,1,&state->sat_body_rates,0);
     mtx_create_val(3,1,&state->gyro_bias,0);
